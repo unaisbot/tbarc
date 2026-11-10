@@ -1,188 +1,361 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JXTFVPW8WB"></script>
-<script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'G-JXTFVPW8WB');
-    </script>
-<!-- Required Meta Tags Always Come First -->
-<meta charset="utf-8"/>
-<meta content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots"/>
-<link href="https://tbarc.in/gallery.html" rel="canonical"/>
-<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-<meta content="Explore the TBARC gallery featuring biodiversity, field activities, conservation programmes, workshops and community initiatives." name="description"/>
-<meta content="@tbarc" name="twitter:site"/>
-<meta content="@tbarc" name="twitter:creator"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="TBARC | Tropical Biodiversity Action &amp; Research Center" name="twitter:title"/>
-<meta content="Explore the TBARC gallery featuring biodiversity, field activities, conservation programmes, workshops and community initiatives." name="twitter:description"/>
-<meta content="https://tbarc.in/" property="og:url"/>
-<meta content="en_US" property="og:locale"/>
-<meta content="website" property="og:type"/>
-<meta content="TBARC" property="og:site_name"/>
-<meta content="TBARC | Tropical Biodiversity Action &amp; Research Center" property="og:title"/>
-<meta content="Explore the TBARC gallery featuring biodiversity, field activities, conservation programmes, workshops and community initiatives." property="og:description"/>
-<!-- Title -->
-<title>Gallery | Tropical Biodiversity Action &amp; Research Center</title>
-<!-- Favicon -->
-
-
-
-
-<link href="/site.webmanifest" rel="manifest"/>
-<!-- Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<!-- CSS HS -->
-<link href="https://preline.co/assets/css/main.css?v=3.0.1" rel="stylesheet"/><link href="site.css" rel="stylesheet"/>
-<link href="favicon.ico" rel="icon" type="image/x-icon"/><link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/><link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The TBARC visual journal: photographs documenting biodiversity engagement, conservation activities, field learning and community programmes.">
+<meta name="theme-color" content="#142f29">
+<link rel="canonical" href="https://tbarc.in/gallery/">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<title>Visual Journal | TBARC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 <style>
-/* Keep footer social icons compact and consistent across pages */
-.tbarc-socials {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+:root{--ink:#1c2a25;--forest:#142f29;--green:#52735f;--moss:#a6b59e;--paper:#f7f7f1;--white:#fff;--line:#dfe4db;--muted:#788178;--gold:#c7a66a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}
+a{color:inherit;text-decoration:none}
+.site-head{background:var(--paper);border-bottom:1px solid var(--line)}
+.nav{max-width:1320px;margin:auto;padding:17px 34px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:43px;height:43px;object-fit:contain}
+.brand-text{font:800 12px/1.35 "Manrope",sans-serif;letter-spacing:.03em;color:var(--forest)}
+.brand-text small{display:block;font:500 10px "DM Sans",sans-serif;letter-spacing:.13em;text-transform:uppercase;color:#748075;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:25px}
+.nav-links a{font-size:12px;font-weight:600;color:#59665d}
+.nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--green)}
+.nav-links a[aria-current="page"]{border-bottom:1px solid var(--gold);padding-bottom:5px}
+.nav-action{font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--forest);border:1px solid #bdc9bd;padding:10px 15px;border-radius:2px}
+.menu{display:none;border:1px solid var(--line);background:transparent;padding:8px 11px;font-size:20px;color:var(--forest)}
+.masthead{background:var(--forest);color:white}
+.mast-inner{max-width:1320px;margin:auto;padding:76px 34px 70px;display:grid;grid-template-columns:1fr .72fr;align-items:end;gap:70px}
+.overline{display:flex;align-items:center;gap:12px;color:#c8b58c;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.overline:before{content:"";width:30px;height:1px;background:var(--gold)}
+h1{font:600 clamp(48px,7vw,88px)/.98 "Playfair Display",serif;letter-spacing:-.035em;margin:23px 0 0;max-width:760px}
+.mast-copy{max-width:420px;border-left:1px solid rgba(255,255,255,.25);padding:5px 0 5px 25px;margin-bottom:5px}
+.mast-copy p{font-size:14px;line-height:1.9;color:#d5dfd7;margin:0}
+.mast-copy span{display:block;margin-top:20px;color:#c8b58c;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.journal-intro{max-width:1320px;margin:auto;padding:53px 34px 24px;display:flex;align-items:end;justify-content:space-between;gap:30px}
+.section-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--green);margin:0 0 10px}
+h2{font:600 clamp(26px,3vw,38px)/1.15 "Playfair Display",serif;color:var(--forest);margin:0}
+.intro-note{max-width:390px;margin:0;color:#707b72;font-size:12px;line-height:1.8}
+.feature{max-width:1320px;margin:0 auto;padding:20px 34px 65px;display:grid;grid-template-columns:1.42fr .8fr;gap:40px;align-items:center}
+.feature-image{position:relative;display:block;padding:0;border:0;background:#e1e7df;cursor:zoom-in;overflow:hidden;width:100%;aspect-ratio:1.55}
+.feature-image img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .7s}
+.feature-image:hover img{transform:scale(1.025)}
+.feature-tag{position:absolute;left:18px;top:18px;background:var(--paper);color:var(--forest);padding:9px 12px;font-size:9px;letter-spacing:.13em;font-weight:700;text-transform:uppercase}
+.feature-caption{border-top:1px solid var(--line);padding-top:14px;display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.feature-copy{padding:18px 0}
+.feature-copy .number{font:500 13px "Playfair Display",serif;color:var(--gold);letter-spacing:.1em}
+.feature-copy h3{font:600 clamp(27px,3vw,40px)/1.16 "Playfair Display",serif;color:var(--forest);margin:18px 0}
+.feature-copy p{font-size:13px;line-height:1.9;color:#6d786f;margin:0 0 22px}
+.text-link{display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:700;color:var(--forest);border-bottom:1px solid var(--gold);padding-bottom:7px}
+.archive{background:#eef0e9;padding:58px 0 72px}
+.archive-inner{max-width:1320px;margin:auto;padding:0 34px}
+.archive-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:28px}
+.archive-head p{max-width:390px;margin:0;color:#707b72;font-size:12px;line-height:1.8}
+.archive-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:26px;row-gap:35px}
+.entry{min-width:0}
+.journal-image{position:relative;display:block;width:100%;padding:0;border:0;background:#dce4dc;aspect-ratio:1.25;overflow:hidden;cursor:zoom-in}
+.journal-image.tall{aspect-ratio:.88}
+.journal-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.journal-image:hover img{transform:scale(1.035)}
+.image-index{position:absolute;left:13px;top:13px;background:rgba(247,247,241,.94);padding:6px 9px;font:500 12px "Playfair Display",serif;color:var(--forest)}
+.image-open{position:absolute;right:13px;bottom:13px;background:var(--forest);color:white;padding:9px 11px;font-size:10px;opacity:0;transition:opacity .2s}
+.journal-image:hover .image-open,.journal-image:focus-visible .image-open{opacity:1}
+.entry-meta{display:flex;justify-content:space-between;gap:10px;padding-top:11px;border-bottom:1px solid #d5dcd2;padding-bottom:12px}
+.entry-meta span,.entry-meta a{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.entry-meta span{color:#889188}
+.entry-meta a{color:#4e7158;white-space:nowrap}
+.closing{max-width:1320px;margin:auto;padding:68px 34px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px}
+.closing h2{font-size:34px}
+.closing p{max-width:620px;color:#707b72;font-size:13px;line-height:1.8;margin:12px 0 0}
+.closing a{background:var(--forest);color:white;padding:14px 19px;font-size:11px;font-weight:700;letter-spacing:.04em}
+.footer{background:#102720;color:#d7e1d8}
+.footer-inner{max-width:1320px;margin:auto;padding:48px 34px 20px}
+.footer-grid{display:grid;grid-template-columns:1.5fr .7fr 1fr;gap:55px}
+.footer-brand{display:flex;align-items:center;gap:11px;margin-bottom:15px}
+.footer-brand img{width:43px;height:43px;object-fit:contain}
+.footer-brand strong{display:block;color:white;font:700 13px "Manrope",sans-serif}
+.footer-brand small{display:block;color:#b4c4b7;font-size:10px;margin-top:4px}
+.footer-copy,.footer-contact p,.footer-links a{font-size:12px;line-height:1.8;color:#b9c9bd}
+.footer-copy{max-width:380px;margin:0}
+.footer h3{margin:0 0 15px;color:white;font:700 12px "Manrope",sans-serif}
+.footer-links{display:grid;gap:7px}
+.footer-links a:hover,.footer-contact a:hover{color:white}
+.socials{display:flex;gap:9px;margin-top:18px}
+.socials a{width:34px;height:34px;border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;border-radius:50%}
+.socials svg{width:16px;height:16px;display:block;fill:currentColor}
+.footer-contact p{margin:0 0 8px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:35px;padding-top:16px;display:flex;justify-content:space-between;gap:15px;color:#9eafa2;font-size:10px}
+.viewer{position:fixed;inset:0;background:rgba(8,20,16,.96);z-index:100;display:none;align-items:center;justify-content:center;padding:30px}
+.viewer.open{display:flex}
+.viewer figure{margin:0;max-width:min(1100px,90vw);max-height:90vh;display:flex;flex-direction:column;align-items:center;gap:12px}
+.viewer img{max-width:100%;max-height:78vh;object-fit:contain}
+.viewer figcaption{display:flex;gap:20px;align-items:center;color:#e8eee8;font-size:11px}
+.viewer figcaption a{color:#d7bd85;font-weight:700}
+.viewer button{position:fixed;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);color:white;width:42px;height:42px;border-radius:50%;font-size:23px;cursor:pointer}
+#viewerClose{top:20px;right:22px}#viewerPrev{left:20px;top:50%}#viewerNext{right:20px;top:50%}
+@media(max-width:850px){.nav-links{gap:13px}.nav-links a{font-size:11px}.mast-inner{gap:35px}.archive-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){
+.nav{padding:12px 18px}.menu{display:block}.nav-action{display:none}
+.nav-links{display:none;position:absolute;top:69px;left:0;right:0;background:var(--paper);padding:15px 22px 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid var(--line)}
+.nav-links.open{display:flex}.nav-links a{padding:10px 0;font-size:13px}
+.mast-inner{padding:55px 21px 48px;grid-template-columns:1fr;gap:25px}h1{font-size:53px}
+.mast-copy{max-width:540px;margin:0;padding-left:17px}
+.journal-intro{padding:39px 21px 17px;display:block}.intro-note{margin-top:12px}
+.feature{padding:12px 21px 45px;grid-template-columns:1fr;gap:18px}
+.feature-copy{padding:4px 0}.feature-copy h3{margin:10px 0}
+.archive{padding:43px 0 52px}.archive-inner{padding:0 21px}.archive-head{display:block}.archive-head p{margin-top:10px}
+.archive-grid{gap:24px 13px}.entry-meta span,.entry-meta a{font-size:8px;letter-spacing:.06em}
+.closing{padding:48px 21px;grid-template-columns:1fr;gap:20px}.closing h2{font-size:30px}
+.footer-inner{padding:40px 21px 18px}.footer-grid{grid-template-columns:1fr 1fr;gap:28px 20px}.footer-grid>div:first-child{grid-column:1/-1}
+.footer-bottom{flex-direction:column}
 }
-.tbarc-socials a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 40px;
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-}
-.tbarc-socials svg {
-    display: block;
-    width: 20px !important;
-    height: 20px !important;
-    min-width: 20px;
-    max-width: 20px;
-    flex: 0 0 20px;
-}
+@media(max-width:420px){.archive-grid{grid-template-columns:1fr}.journal-image,.journal-image.tall{aspect-ratio:1.25}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}}
 </style>
-
 </head>
-<body class="">
-<!-- ========== HEADER ========== -->
-<header class="tbarc-header"><nav aria-label="Main navigation" class="tbarc-nav-wrap"><a aria-label="TBARC home" class="tbarc-brand" href="./"><img alt="TBARC logo" src="assets/logo.png"/><span class="tbarc-brand-name">Tropical <span>Biodiversity</span> Action and<br/>Research Center</span></a><div class="tbarc-nav"><a href="./">Home</a><a href="about/">About</a><a href="blog/">Blog</a><a aria-current="page" href="gallery.html">Gallery</a><a href="videos.html">Videos</a><a href="downloads.html">Downloads</a><a href="bio-invasion.html">Bio-Invasion</a></div><a class="tbarc-cta" href="https://volunteer.tbarc.in/" rel="noopener noreferrer" target="_blank">Get Involved <span aria-hidden="true">↗</span></a><button aria-expanded="false" aria-label="Open navigation" class="tbarc-menu-toggle" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></button></nav></header>
-<!-- ========== END HEADER ========== -->
-<!-- ========== MAIN CONTENT ========== -->
-<main id="content">
-<section class="bg-gray-200 text-gray-800">
-<div class="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
-<div class="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" id="blogsDiv">
-</div>
-</div>
+<body>
+<header class="site-head">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="../"><img src="../assets/logo.png" alt="TBARC logo"><span class="brand-text">TROPICAL BIODIVERSITY<small>Action and Research Center</small></span></a>
+    <button class="menu" id="menu" type="button" aria-expanded="false" aria-label="Open navigation">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="../">Home</a><a href="../about/">About</a><a href="../blog/">Blog</a><a href="./" aria-current="page">Gallery</a><a href="../videos.html">Videos</a><a href="../downloads.html">Downloads</a><a href="../bio-invasion.html">Bio-Invasion</a>
+    </div>
+    <a class="nav-action" href="https://volunteer.tbarc.in/" target="_blank" rel="noopener noreferrer">GET INVOLVED ↗</a>
+  </nav>
+</header>
+
+<section class="masthead">
+  <div class="mast-inner">
+    <div><div class="overline">TBARC · Visual journal</div><h1>Field notes<br>in photographs.</h1></div>
+    <div class="mast-copy"><p>A visual record of the people, encounters and shared experiences behind biodiversity research and conservation. From learning spaces to community programmes, these moments reflect the work that happens together.</p><span>Research · Conservation · Community</span></div>
+  </div>
 </section>
-</main>
-<!-- ========== END MAIN CONTENT ========== -->
-<!-- ========== FOOTER ========== -->
-<footer class="tbarc-footer"><div class="tbarc-footer-inner"><div class="tbarc-footer-grid"><div><div class="tbarc-footer-brand"><img alt="" src="assets/logo.png"/><div><h2>Tropical Biodiversity Action &amp; Research Center</h2><p style="margin:0">Research · Conservation · Community action</p></div></div><p>Advancing biodiversity research, ecological awareness and conservation action through collaboration, education and field-based initiatives.</p><div class="tbarc-socials"><a aria-label="TBARC on Facebook" href="https://facebook.com/tbarcindia" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2H7.3V13h2.8v8z"></path></svg></a><a aria-label="TBARC on Instagram" href="https://www.instagram.com/tbarcindia/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewBox="0 0 24 24"><rect fill="none" height="18" rx="5" stroke="currentColor" stroke-width="2" width="18" x="3" y="3"></rect><circle cx="12" cy="12" fill="none" r="4" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.2"></circle></svg></a><a aria-label="TBARC on YouTube" href="https://www.youtube.com/@tbarcindia" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6z"></path></svg></a><a aria-label="TBARC on LinkedIn" href="https://www.linkedin.com/company/tbarcindia" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5.2 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3.5 9h3.4v11.5H3.5zM9 9h3.2v1.6h.1A3.5 3.5 0 0 1 15.5 8c3.5 0 4.1 2.3 4.1 5.2v7.3h-3.4V14c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3v6.6H9z"></path></svg></a></div></div><div><h3>Explore TBARC</h3><div class="tbarc-footer-links"><a href="./">Home</a><a href="about/">About</a><a href="blog/">Blog</a><a href="gallery.html">Gallery</a><a href="videos.html">Videos</a><a href="downloads.html">Downloads</a><a href="bio-invasion.html">Bio-Invasion</a></div></div><div><h3>Contact</h3><p><a href="mailto:tbarcindia@gmail.com">tbarcindia@gmail.com</a></p><p>Appolo, Mampad College PO,<br/>Nilambur, Kerala 676542, India</p><p>Connect with us for research, volunteering and conservation initiatives.</p></div></div><div class="tbarc-footer-bottom"><span>© 2026 Tropical Biodiversity Action &amp; Research Center. All rights reserved.</span><span>Built for biodiversity and people.</span></div></div></footer>
-<!-- ========== END FOOTER ========== -->
-<!-- JS Implementing Plugins -->
-<!-- JS PLUGINS -->
-<!-- Required plugins -->
+
+<section class="journal-intro">
+  <div><p class="section-label">The TBARC journal / 01</p><h2>People, participation &amp; purpose.</h2></div>
+  <p class="intro-note">A curated visual archive of TBARC activities. Each image links back to its original post, keeping the story connected to the moment it was shared.</p>
+</section>
+
+<section class="feature">
+  <div>
+    <button class="feature-image" type="button" data-photo="0" aria-label="Open featured TBARC archive photograph">
+      <img src="../assets/img17.heic" alt="Featured photograph from the TBARC visual archive" fetchpriority="high">
+      <span class="feature-tag">From the archive · Featured frame</span>
+    </button>
+    <div class="feature-caption"><span>TBARC VISUAL ARCHIVE</span><a class="text-link" href="https://www.instagram.com/p/DOTaEnSkcH0/" target="_blank" rel="noopener noreferrer">View original post ↗</a></div>
+  </div>
+  <div class="feature-copy"><span class="number">01 / VISUAL RECORD</span><h3>Documenting the work. Remembering the moments.</h3><p>Every programme is shaped by people who participate, share knowledge and contribute to conservation. This journal brings together a selection of those moments from TBARC's public activity archive.</p><a class="text-link" href="https://www.instagram.com/tbarcindia/" target="_blank" rel="noopener noreferrer">Explore TBARC on Instagram ↗</a></div>
+</section>
+
+<section class="archive">
+  <div class="archive-inner">
+    <div class="archive-head"><div><p class="section-label">Selected frames</p><h2>From our shared archive.</h2></div><p>Browse the collection at your own pace. Open an image for a closer view, or follow the link to its original Instagram post.</p></div>
+    <div class="archive-grid">
+
+      <article class="entry">
+        <button class="journal-image" type="button" data-photo="1" aria-label="Open archive photograph 02">
+          <img src="../assets/img16.jpg" alt="TBARC archive photograph 02" loading="lazy">
+          <span class="image-index">02</span>
+          <span class="image-open">View image ↗</span>
+        </button>
+        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DOllERaE5I7/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+      </article>
+
+      <article class="entry">
+        <button class="journal-image tall" type="button" data-photo="2" aria-label="Open archive photograph 03">
+          <img src="../assets/img15.jpg" alt="TBARC archive photograph 03" loading="lazy">
+          <span class="image-index">03</span>
+          <span class="image-open">View image ↗</span>
+        </button>
+        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DOaSegTjLjW/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+      </article>
+
+      <article class="entry">
+        <button class="journal-image" type="button" data-photo="3" aria-label="Open archive photograph 04">
+          <img src="../assets/img14.jpg" alt="TBARC archive photograph 04" loading="lazy">
+          <span class="image-index">04</span>
+          <span class="image-open">View image ↗</span>
+        </button>
+        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DOYj2DPEfSy/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+      </article>
+
+      <article class="entry">
+        <button class="journal-image" type="button" data-photo="4" aria-label="Open archive photograph 05">
+          <img src="../assets/img13.jpg" alt="TBARC archive photograph 05" loading="lazy">
+          <span class="image-index">05</span>
+          <span class="image-open">View image ↗</span>
+        </button>
+        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DOTaEnSkcH0/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+      </article>
+
+      <article class="entry">
+        <button class="journal-image tall" type="button" data-photo="5" aria-label="Open archive photograph 06">
+          <img src="../assets/img12.heic" alt="TBARC archive photograph 06" loading="lazy">
+          <span class="image-index">06</span>
+          <span class="image-open">View image ↗</span>
+        </button>
+        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DN_EqwyE5xC/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+      </article>
+
+      <article class="entry">
+        <button class="journal-image" type="button" data-photo="6" aria-label="Open archive photograph 07">
+          <img src="../assets/img11.heic" alt="TBARC archive photograph 07" loading="lazy">
+          <span class="image-index">07</span>
+          <span class="image-open">View image ↗</span>
+        </button>
+        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DNyHM-oZlFL/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+      </article>
+
+      <article class="entry">
+        <button class="journal-image" type="button" data-photo="7" aria-label="Open archive photograph 08">
+          <img src="../assets/img10.heic" alt="TBARC archive photograph 08" loading="lazy">
+          <span class="image-index">08</span>
+          <span class="image-open">View image ↗</span>
+        </button>
+        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DNqMKa5T30d/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+      </article>
+
+      <article class="entry">
+        <button class="journal-image" type="button" data-photo="8" aria-label="Open archive photograph 09">
+          <img src="../assets/img9.heic" alt="TBARC archive photograph 09" loading="lazy">
+          <span class="image-index">09</span>
+          <span class="image-open">View image ↗</span>
+        </button>
+        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DNffJwGMxTu/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+      </article>
+
+      <article class="entry">
+        <button class="journal-image tall" type="button" data-photo="9" aria-label="Open archive photograph 10">
+          <img src="../assets/img8.heic" alt="TBARC archive photograph 10" loading="lazy">
+          <span class="image-index">10</span>
+          <span class="image-open">View image ↗</span>
+        </button>
+        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DNfBTU7R45Z/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+      </article>
+
+      <article class="entry">
+        <button class="journal-image" type="button" data-photo="10" aria-label="Open archive photograph 11">
+          <img src="../assets/img7.heic" alt="TBARC archive photograph 11" loading="lazy">
+          <span class="image-index">11</span>
+          <span class="image-open">View image ↗</span>
+        </button>
+        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DMKBqFtxrDv/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+      </article>
+
+      <article class="entry">
+        <button class="journal-image" type="button" data-photo="11" aria-label="Open archive photograph 12">
+          <img src="../assets/img6.heic" alt="TBARC archive photograph 12" loading="lazy">
+          <span class="image-index">12</span>
+          <span class="image-open">View image ↗</span>
+        </button>
+        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DJCPoaVTFUO/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+      </article>
+
+      <article class="entry">
+        <button class="journal-image" type="button" data-photo="12" aria-label="Open archive photograph 13">
+          <img src="../assets/img5.heic" alt="TBARC archive photograph 13" loading="lazy">
+          <span class="image-index">13</span>
+          <span class="image-open">View image ↗</span>
+        </button>
+        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DJHS-wSz3jc/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+      </article>
+
+      <article class="entry">
+        <button class="journal-image tall" type="button" data-photo="13" aria-label="Open archive photograph 14">
+          <img src="../assets/img4.heic" alt="TBARC archive photograph 14" loading="lazy">
+          <span class="image-index">14</span>
+          <span class="image-open">View image ↗</span>
+        </button>
+        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DEkdhYfT52p/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+      </article>
+
+      <article class="entry">
+        <button class="journal-image" type="button" data-photo="14" aria-label="Open archive photograph 15">
+          <img src="../assets/img3.heic" alt="TBARC archive photograph 15" loading="lazy">
+          <span class="image-index">15</span>
+          <span class="image-open">View image ↗</span>
+        </button>
+        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DEP_XgZTmWQ/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+      </article>
+
+      <article class="entry">
+        <button class="journal-image" type="button" data-photo="15" aria-label="Open archive photograph 16">
+          <img src="../assets/img2.heic" alt="TBARC archive photograph 16" loading="lazy">
+          <span class="image-index">16</span>
+          <span class="image-open">View image ↗</span>
+        </button>
+        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/C-DbAyHzNP-/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+      </article>
+
+      <article class="entry">
+        <button class="journal-image" type="button" data-photo="16" aria-label="Open archive photograph 17">
+          <img src="../assets/img1.png" alt="TBARC archive photograph 17" loading="lazy">
+          <span class="image-index">17</span>
+          <span class="image-open">View image ↗</span>
+        </button>
+        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DEHQAUszWgk/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div><p class="section-label">Stay connected</p><h2>More stories. More people. More action.</h2><p>Follow TBARC for updates from our workshops, field activities, awareness programmes and conservation initiatives.</p></div>
+  <a href="https://www.instagram.com/tbarcindia/" target="_blank" rel="noopener noreferrer">FOLLOW TBARC ON INSTAGRAM ↗</a>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div><div class="footer-brand"><img src="../assets/logo.png" alt="TBARC logo"><span><strong>Tropical Biodiversity Action &amp; Research Center</strong><small>Research · Conservation · Community action</small></span></div><p class="footer-copy">Advancing biodiversity research, ecological awareness and conservation action through collaboration, education and field-based initiatives.</p>
+        <div class="socials">
+          <a href="https://facebook.com/tbarcindia" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2H7.3V13h2.8v8z"/></svg></a>
+          <a href="https://www.instagram.com/tbarcindia/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2"/></svg></a>
+          <a href="https://www.youtube.com/@tbarcindia" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6z"/></svg></a>
+          <a href="https://www.linkedin.com/company/tbarcindia" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M5.2 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3.5 9h3.4v11.5H3.5zM9 9h3.2v1.6h.1A3.5 3.5 0 0 1 15.5 8c3.5 0 4.1 2.3 4.1 5.2v7.3h-3.4V14c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3v6.6H9z"/></svg></a>
+        </div>
+      </div>
+      <div><h3>Explore TBARC</h3><div class="footer-links"><a href="../">Home</a><a href="../about/">About</a><a href="../blog/">Blog</a><a href="./">Gallery</a><a href="../videos.html">Videos</a><a href="../downloads.html">Downloads</a><a href="../bio-invasion.html">Bio-Invasion</a></div></div>
+      <div class="footer-contact"><h3>Contact</h3><p><a href="mailto:tbarcindia@gmail.com">tbarcindia@gmail.com</a></p><p>Appolo, Mampad College PO,<br>Nilambur, Kerala 676542, India</p><p>Connect with us for research, volunteering and conservation initiatives.</p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Tropical Biodiversity Action &amp; Research Center. All rights reserved.</span><span>Built for biodiversity and people.</span></div>
+  </div>
+</footer>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="TBARC photograph viewer">
+  <button id="viewerClose" aria-label="Close viewer" type="button">×</button><button id="viewerPrev" aria-label="Previous image" type="button">‹</button>
+  <figure><img id="viewerImg" src="" alt=""><figcaption><span id="viewerCount"></span><a id="viewerLink" href="#" target="_blank" rel="noopener noreferrer">Open original post ↗</a></figcaption></figure>
+  <button id="viewerNext" aria-label="Next image" type="button">›</button>
+</div>
 <script>
-        const items = [
-            {
-                img_link: "assets/img17.heic",
-                insta_link: "https://www.instagram.com/p/DOTaEnSkcH0/",
-            },
-            {
-                img_link: "assets/img16.jpg",
-                insta_link: "https://www.instagram.com/p/DOllERaE5I7/",
-            },
-            {
-                img_link: "assets/img15.jpg",
-                insta_link: "https://www.instagram.com/p/DOaSegTjLjW/",
-            },
-            {
-                img_link: "assets/img14.jpg",
-                insta_link: "https://www.instagram.com/p/DOYj2DPEfSy/",
-            },
-            {
-                img_link: "assets/img13.jpg",
-                insta_link: "https://www.instagram.com/p/DOTaEnSkcH0/",
-            },
-            {
-                img_link: "assets/img12.heic",
-                insta_link: "https://www.instagram.com/p/DN_EqwyE5xC/",
-            },
-            {
-                img_link: "assets/img11.heic",
-                insta_link: "https://www.instagram.com/p/DNyHM-oZlFL/",
-            },
-            {
-                img_link: "assets/img10.heic",
-                insta_link: "https://www.instagram.com/p/DNqMKa5T30d/",
-            },
-            {
-                img_link: "assets/img9.heic",
-                insta_link: "https://www.instagram.com/p/DNffJwGMxTu/",
-            },
-            {
-                img_link: "assets/img8.heic",
-                insta_link: "https://www.instagram.com/p/DNfBTU7R45Z/",
-            },
-            {
-                img_link: "assets/img7.heic",
-                insta_link: "https://www.instagram.com/p/DMKBqFtxrDv/",
-            },
-            {
-                img_link: "assets/img6.heic",
-                insta_link: "https://www.instagram.com/p/DJCPoaVTFUO/",
-            },
-            {
-                img_link: "assets/img5.heic",
-                insta_link: "https://www.instagram.com/p/DJHS-wSz3jc/",
-            },
-            {
-                img_link: "assets/img4.heic",
-                insta_link: "https://www.instagram.com/p/DEkdhYfT52p/",
-            },
-            {
-                img_link: "assets/img3.heic",
-                insta_link: "https://www.instagram.com/p/DEP_XgZTmWQ/",
-            },
-            {
-                img_link: "assets/img2.heic",
-                insta_link: "https://www.instagram.com/p/C-DbAyHzNP-/",
-            },
-            {
-                img_link: "assets/img1.png",
-                insta_link: "https://www.instagram.com/p/DEHQAUszWgk/",
-            },
-        ];
-
-        const blogsDiv = document.getElementById("blogsDiv");
-
-        if (blogsDiv) {
-            items.forEach((item, index) => {
-                const card = document.createElement("a");
-                card.href = item.insta_link;
-                card.className = "block overflow-hidden rounded-lg bg-white";
-                card.target = "_blank";
-                card.rel = "noopener noreferrer";
-                card.setAttribute("aria-label", `Open TBARC Instagram post ${index + 1}`);
-
-                const image = document.createElement("img");
-                image.src = item.img_link;
-                image.alt = `TBARC gallery photograph ${index + 1}`;
-                image.className = "h-52 w-full rounded-t-lg object-cover";
-                image.loading = "lazy";
-                image.decoding = "async";
-
-                card.appendChild(image);
-                blogsDiv.appendChild(card);
-            });
-        }
-    </script>
-<script src="https://cdn.jsdelivr.net/npm/preline/dist/index.js"></script>
-<script src="site.js"></script></body>
+const photoItems = [{"src": "../assets/img17.heic", "url": "https://www.instagram.com/p/DOTaEnSkcH0/", "alt": "TBARC archive photograph 01"}, {"src": "../assets/img16.jpg", "url": "https://www.instagram.com/p/DOllERaE5I7/", "alt": "TBARC archive photograph 02"}, {"src": "../assets/img15.jpg", "url": "https://www.instagram.com/p/DOaSegTjLjW/", "alt": "TBARC archive photograph 03"}, {"src": "../assets/img14.jpg", "url": "https://www.instagram.com/p/DOYj2DPEfSy/", "alt": "TBARC archive photograph 04"}, {"src": "../assets/img13.jpg", "url": "https://www.instagram.com/p/DOTaEnSkcH0/", "alt": "TBARC archive photograph 05"}, {"src": "../assets/img12.heic", "url": "https://www.instagram.com/p/DN_EqwyE5xC/", "alt": "TBARC archive photograph 06"}, {"src": "../assets/img11.heic", "url": "https://www.instagram.com/p/DNyHM-oZlFL/", "alt": "TBARC archive photograph 07"}, {"src": "../assets/img10.heic", "url": "https://www.instagram.com/p/DNqMKa5T30d/", "alt": "TBARC archive photograph 08"}, {"src": "../assets/img9.heic", "url": "https://www.instagram.com/p/DNffJwGMxTu/", "alt": "TBARC archive photograph 09"}, {"src": "../assets/img8.heic", "url": "https://www.instagram.com/p/DNfBTU7R45Z/", "alt": "TBARC archive photograph 10"}, {"src": "../assets/img7.heic", "url": "https://www.instagram.com/p/DMKBqFtxrDv/", "alt": "TBARC archive photograph 11"}, {"src": "../assets/img6.heic", "url": "https://www.instagram.com/p/DJCPoaVTFUO/", "alt": "TBARC archive photograph 12"}, {"src": "../assets/img5.heic", "url": "https://www.instagram.com/p/DJHS-wSz3jc/", "alt": "TBARC archive photograph 13"}, {"src": "../assets/img4.heic", "url": "https://www.instagram.com/p/DEkdhYfT52p/", "alt": "TBARC archive photograph 14"}, {"src": "../assets/img3.heic", "url": "https://www.instagram.com/p/DEP_XgZTmWQ/", "alt": "TBARC archive photograph 15"}, {"src": "../assets/img2.heic", "url": "https://www.instagram.com/p/C-DbAyHzNP-/", "alt": "TBARC archive photograph 16"}, {"src": "../assets/img1.png", "url": "https://www.instagram.com/p/DEHQAUszWgk/", "alt": "TBARC archive photograph 17"}];
+const viewer = document.getElementById("viewer");
+const viewerImg = document.getElementById("viewerImg");
+const viewerLink = document.getElementById("viewerLink");
+const viewerCount = document.getElementById("viewerCount");
+let current = 0;
+function openViewer(index) {
+  current = (index + photoItems.length) % photoItems.length;
+  const p = photoItems[current];
+  viewerImg.src = p.src; viewerImg.alt = p.alt; viewerLink.href = p.url;
+  viewerCount.textContent = `${current + 1} / ${photoItems.length}`;
+  viewer.classList.add("open"); document.body.style.overflow = "hidden";
+}
+function closeViewer() { viewer.classList.remove("open"); viewerImg.src = ""; document.body.style.overflow = ""; }
+document.querySelectorAll("[data-photo]").forEach(el => el.addEventListener("click", () => openViewer(Number(el.dataset.photo))));
+document.getElementById("viewerClose").addEventListener("click", closeViewer);
+document.getElementById("viewerPrev").addEventListener("click", () => openViewer(current - 1));
+document.getElementById("viewerNext").addEventListener("click", () => openViewer(current + 1));
+viewer.addEventListener("click", e => { if (e.target === viewer) closeViewer(); });
+document.addEventListener("keydown", e => { if (!viewer.classList.contains("open")) return; if (e.key === "Escape") closeViewer(); if (e.key === "ArrowLeft") openViewer(current - 1); if (e.key === "ArrowRight") openViewer(current + 1); });
+const menu = document.getElementById("menu"), links = document.getElementById("navLinks");
+menu.addEventListener("click", () => { const opened = links.classList.toggle("open"); menu.setAttribute("aria-expanded", String(opened)); menu.textContent = opened ? "×" : "☰"; });
+</script>
+</body>
 </html>
