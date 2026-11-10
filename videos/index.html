@@ -6,7 +6,6 @@
 <meta name="description" content="Watch TBARC webinars, biodiversity awareness videos, environmental talks and educational sessions.">
 <meta name="theme-color" content="#142f29">
 <link rel="canonical" href="https://tbarc.in/videos/">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -335,6 +334,315 @@ h2{margin:0;color:var(--forest);font:600 clamp(27px,3vw,38px)/1.15 "Playfair Dis
   }
 }
 </style>
+<style>
+/* FINAL TBARC HEADER STANDARD — identical on every page */
+html body header.site-header {
+  position: relative !important;
+  top: auto !important;
+  z-index: 1000 !important;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 138px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #ffffff !important;
+  border: 0 !important;
+  border-bottom: 1px solid #e4eae3 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+html body header.site-header .container.nav-wrap {
+  box-sizing: border-box !important;
+  width: calc(100% - 72px) !important;
+  max-width: 1800px !important;
+  min-height: 138px !important;
+  height: 138px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-flow: row nowrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+}
+html body header.site-header a.brand {
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex: 0 0 430px !important;
+  flex-flow: row nowrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 18px !important;
+  width: 430px !important;
+  min-width: 430px !important;
+  max-width: 430px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #174f35 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+html body header.site-header a.brand img {
+  display: block !important;
+  flex: 0 0 100px !important;
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+  height: 100px !important;
+  min-height: 100px !important;
+  max-height: 100px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  object-fit: contain !important;
+}
+html body header.site-header a.brand .brand-name {
+  display: block !important;
+  flex: 0 0 auto !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: max-content !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #174f35 !important;
+  font-family: Manrope, Arial, sans-serif !important;
+  font-size: 23px !important;
+  font-weight: 800 !important;
+  line-height: 1.22 !important;
+  letter-spacing: -0.35px !important;
+  white-space: nowrap !important;
+}
+html body header.site-header a.brand .brand-name span {
+  display: inline !important;
+  color: #6b9b35 !important;
+  font: inherit !important;
+  white-space: nowrap !important;
+}
+html body header.site-header nav#primary-navigation.nav-links {
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-flow: row nowrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: clamp(20px, 2vw, 38px) !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+html body header.site-header nav#primary-navigation.nav-links a {
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 48px !important;
+  margin: 0 !important;
+  padding: 0 0 8px !important;
+  border: 0 !important;
+  border-bottom: 4px solid transparent !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #4b5b53 !important;
+  font-family: Manrope, Arial, sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  box-shadow: none !important;
+}
+html body header.site-header nav#primary-navigation.nav-links a:hover {
+  color: #174f35 !important;
+}
+html body header.site-header nav#primary-navigation.nav-links a.active,
+html body header.site-header nav#primary-navigation.nav-links a[aria-current="page"] {
+  color: #174f35 !important;
+  border-bottom: 4px solid #78a65e !important;
+}
+html body header.site-header nav#primary-navigation.nav-links a::before,
+html body header.site-header nav#primary-navigation.nav-links a::after {
+  content: none !important;
+  display: none !important;
+}
+html body header.site-header a.nav-cta {
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  flex: 0 0 236px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  width: 236px !important;
+  min-width: 236px !important;
+  max-width: 236px !important;
+  height: 78px !important;
+  margin: 0 !important;
+  padding: 0 22px !important;
+  border: 1px solid #145a32 !important;
+  border-radius: 11px !important;
+  background: #145a32 !important;
+  color: #ffffff !important;
+  font-family: Manrope, Arial, sans-serif !important;
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  box-shadow: none !important;
+}
+html body header.site-header a.nav-cta .arrow {
+  display: inline !important;
+  color: inherit !important;
+  font: inherit !important;
+}
+html body header.site-header button.menu-toggle {
+  display: none !important;
+}
+@media (max-width: 1500px) {
+  html body header.site-header .container.nav-wrap {
+    width: calc(100% - 48px) !important;
+    gap: 20px !important;
+  }
+  html body header.site-header a.brand {
+    flex-basis: 360px !important;
+    width: 360px !important;
+    min-width: 360px !important;
+    max-width: 360px !important;
+    gap: 12px !important;
+  }
+  html body header.site-header a.brand img {
+    flex-basis: 82px !important;
+    width: 82px !important;
+    min-width: 82px !important;
+    max-width: 82px !important;
+    height: 82px !important;
+    min-height: 82px !important;
+    max-height: 82px !important;
+  }
+  html body header.site-header a.brand .brand-name {
+    font-size: 20px !important;
+  }
+  html body header.site-header nav#primary-navigation.nav-links {
+    gap: clamp(14px, 1.45vw, 24px) !important;
+  }
+  html body header.site-header nav#primary-navigation.nav-links a {
+    font-size: 18px !important;
+  }
+  html body header.site-header a.nav-cta {
+    flex-basis: 190px !important;
+    width: 190px !important;
+    min-width: 190px !important;
+    max-width: 190px !important;
+    height: 66px !important;
+    font-size: 18px !important;
+  }
+}
+@media (max-width: 1050px) {
+  html body header.site-header { min-height: 84px !important; }
+  html body header.site-header .container.nav-wrap {
+    width: calc(100% - 32px) !important;
+    height: 84px !important;
+    min-height: 84px !important;
+    gap: 14px !important;
+  }
+  html body header.site-header a.brand {
+    flex: 0 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+  html body header.site-header a.brand img {
+    flex-basis: 58px !important;
+    width: 58px !important;
+    min-width: 58px !important;
+    max-width: 58px !important;
+    height: 58px !important;
+    min-height: 58px !important;
+    max-height: 58px !important;
+  }
+  html body header.site-header a.brand .brand-name { font-size: 16px !important; }
+  html body header.site-header nav#primary-navigation.nav-links { gap: 12px !important; }
+  html body header.site-header nav#primary-navigation.nav-links a { font-size: 14px !important; }
+  html body header.site-header a.nav-cta {
+    flex-basis: 138px !important;
+    width: 138px !important;
+    min-width: 138px !important;
+    max-width: 138px !important;
+    height: 52px !important;
+    padding: 0 10px !important;
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 760px) {
+  html body header.site-header { min-height: 76px !important; }
+  html body header.site-header .container.nav-wrap {
+    position: relative !important;
+    width: calc(100% - 28px) !important;
+    height: 76px !important;
+    min-height: 76px !important;
+  }
+  html body header.site-header a.brand img {
+    flex-basis: 52px !important;
+    width: 52px !important;
+    min-width: 52px !important;
+    max-width: 52px !important;
+    height: 52px !important;
+    min-height: 52px !important;
+    max-height: 52px !important;
+  }
+  html body header.site-header a.brand .brand-name { font-size: 14px !important; }
+  html body header.site-header button.menu-toggle {
+    display: inline-flex !important;
+    flex: 0 0 42px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 42px !important;
+    height: 42px !important;
+    border: 1px solid #dce7dc !important;
+    border-radius: 8px !important;
+    background: #fff !important;
+    color: #174f35 !important;
+  }
+  html body header.site-header nav#primary-navigation.nav-links {
+    display: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: -14px !important;
+    right: -14px !important;
+    z-index: 1001 !important;
+    padding: 12px 22px 18px !important;
+    background: #fff !important;
+    border: 0 !important;
+    border-bottom: 1px solid #e2eae0 !important;
+    box-shadow: 0 12px 20px rgba(0,0,0,.08) !important;
+    align-items: stretch !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+  }
+  html body header.site-header nav#primary-navigation.nav-links.is-open { display: flex !important; }
+  html body header.site-header nav#primary-navigation.nav-links a {
+    justify-content: flex-start !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 10px 0 10px 12px !important;
+    border: 0 !important;
+    border-left: 3px solid transparent !important;
+    font-size: 15px !important;
+  }
+  html body header.site-header nav#primary-navigation.nav-links a.active,
+  html body header.site-header nav#primary-navigation.nav-links a[aria-current="page"] {
+    border-left: 3px solid #78a65e !important;
+    border-bottom: 0 !important;
+  }
+  html body header.site-header a.nav-cta { display: none !important; }
+}
+</style>
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
 </head>
 <body>
 <header class="site-header">
