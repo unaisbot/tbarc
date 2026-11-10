@@ -6,7 +6,7 @@
   <meta name="description" content="Explore and access educational, research and biodiversity resources from the Tropical Biodiversity Action and Research Center.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#173d32">
-  <link rel="canonical" href="https://tbarc.in/downloads.html">
+  <link rel="canonical" href="https://tbarc.in/downloads/">
   <title>Resources | TBARC – Tropical Biodiversity Action &amp; Research Center</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
@@ -28,23 +28,186 @@
     .footer{background:#122f27;color:#d5dfd6;padding:48px 28px 20px}.footer-inner{max-width:1200px;margin:auto}.footer-grid{display:grid;grid-template-columns:1.6fr .8fr 1fr;gap:55px;padding-bottom:34px}.footer-brand{display:flex;align-items:center;gap:13px;margin-bottom:16px}.footer-brand img{width:50px;height:50px;object-fit:contain}.footer-brand h2{font:800 14px Manrope,sans-serif;color:white;margin:0}.footer-brand p{font-size:11px;color:#b9c9bd;margin:4px 0 0}.footer-desc,.footer p{font-size:12px;color:#b9c9bd}.footer h3{font:700 12px Manrope,sans-serif;color:white;letter-spacing:.1em;text-transform:uppercase;margin:5px 0 17px}.footer-links{display:grid;grid-template-columns:1fr 1fr;gap:10px}.footer a{color:#c9d7cd;text-decoration:none;font-size:12px}.footer a:hover{color:white}.socials{display:flex;gap:10px;margin-top:17px}.socials a{width:34px;height:34px;border:1px solid #49675a;border-radius:50%;display:grid;place-items:center}.socials svg{width:16px;height:16px;fill:currentColor}.footer-bottom{border-top:1px solid #355347;padding-top:17px;display:flex;justify-content:space-between;gap:20px;color:#9fb3a5;font-size:10px}
     @media(max-width:900px){.nav-links{gap:12px}.nav-links a{font-size:12px}.brand{min-width:auto}.nav-cta{display:none}.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:680px){.nav-wrap{padding:10px 18px}.brand img{width:42px;height:42px}.brand-name{font-size:11px}.menu-toggle{display:block}.menu-toggle svg{width:22px;height:22px;display:block}.nav-links{display:none;position:absolute;top:66px;left:0;right:0;background:#fafaf5;border-bottom:1px solid var(--line);padding:18px 22px 22px;flex-direction:column;align-items:flex-start;gap:16px}.nav-links.open{display:flex}.nav-links a{font-size:14px}.hero-inner{padding:48px 22px}.main{padding:40px 20px 58px}.resource-grid{grid-template-columns:1fr}.resource-image{height:220px}.footer{padding:38px 22px 18px}.footer-grid{grid-template-columns:1fr;gap:26px}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:7px}}
+  
+/* TBARC shared page-hero and footer treatment */
+.tbarc-page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-color: #173d32;
+  background-image: url('../assets/banner2.jpg');
+  background-position: center 48%;
+  background-size: cover;
+  border-radius: 0;
+}
+.tbarc-page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(5,32,17,.93) 0%, rgba(5,32,17,.78) 52%, rgba(5,32,17,.48) 100%);
+}
+.tbarc-hero-inner {
+  width: min(1200px, calc(100% - 60px));
+  margin: 0 auto;
+  padding: 64px 0;
+  display: grid;
+  grid-template-columns: minmax(0,1.15fr) minmax(260px,.75fr);
+  align-items: center;
+  gap: 64px;
+}
+.tbarc-hero-heading { min-width: 0; }
+.tbarc-hero-eyebrow {
+  display: inline-block;
+  color: #d8e9bd;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.tbarc-page-hero h1,
+.tbarc-page-hero .tbarc-hero-title {
+  color: #fff !important;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(38px, 5.2vw, 62px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -.045em;
+  margin: 18px 0 0;
+  max-width: 760px;
+  text-shadow: 0 2px 18px rgba(0,0,0,.18);
+}
+.tbarc-page-hero h1 span { color: #fff !important; }
+.tbarc-hero-description {
+  border-left: 1px solid rgba(255,255,255,.38);
+  padding: 5px 0 5px 25px;
+  color: rgba(255,255,255,.92);
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 510px;
+}
+.tbarc-hero-description p { color: inherit; margin: 0; }
+.tbarc-hero-description .tbarc-hero-note {
+  display: block;
+  margin-top: 18px;
+  color: #d8e9bd;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.tbarc-hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
+.tbarc-page-hero .tbarc-hero-actions a {
+  display:inline-flex; align-items:center; justify-content:center;
+  min-height:42px; padding:11px 18px; border-radius:4px;
+  font:700 13px/1.25 "DM Sans",sans-serif; text-decoration:none;
+}
+.tbarc-page-hero .tbarc-hero-actions a:first-child { background:#a7d86a; color:#163b22; }
+.tbarc-page-hero .tbarc-hero-actions a:last-child { background:#fff; color:#173d32; }
+.tbarc-page-hero .tbarc-hero-actions a:hover { transform:translateY(-2px); }
+
+/* Unified footer presentation; footer wording and links remain page-specific */
+.footer {
+  background: #102d25 !important;
+  color: #dce8dd !important;
+  padding: 54px 0 22px !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+.footer-inner {
+  width: min(1200px, calc(100% - 56px));
+  max-width: 1200px !important;
+  margin: 0 auto;
+  padding: 0 !important;
+}
+.footer-grid {
+  display: grid !important;
+  grid-template-columns: minmax(260px,1.45fr) minmax(130px,.7fr) minmax(150px,.8fr) minmax(210px,1fr) !important;
+  gap: 34px !important;
+  align-items: start;
+  padding-bottom: 34px;
+}
+.footer-brand { display:flex; align-items:center; gap:12px; margin-bottom:15px; }
+.footer-brand img { width:54px !important; height:54px !important; object-fit:contain; }
+.footer-brand strong,.footer-brand h2 {
+  display:block; margin:0; color:#fff !important;
+  font:800 14px/1.35 "Manrope",sans-serif !important;
+}
+.footer-brand small,.footer-brand p {
+  display:block; margin:4px 0 0; color:#b9cbbd !important;
+  font:500 11px/1.5 "DM Sans",sans-serif !important;
+}
+.footer-copy,.footer-desc,.footer-about p,.footer p,
+.footer-contact,.footer-contact p,.footer-contact-col {
+  color:#b9cbbd !important;
+  font:400 12px/1.8 "DM Sans",sans-serif !important;
+}
+.footer h3 {
+  margin:2px 0 15px !important; color:#fff !important;
+  font:700 12px/1.4 "Manrope",sans-serif !important;
+  letter-spacing:.1em; text-transform:uppercase;
+}
+.footer-links { display:grid; gap:8px; }
+.footer-links a,.footer a {
+  color:#c5d4c8; font:500 12px/1.65 "DM Sans",sans-serif;
+  text-decoration:none; transition:color .2s ease;
+}
+.footer-links a:hover,.footer a:hover { color:#fff; }
+.footer .socials,.footer .tbarc-socials { display:flex; flex-wrap:wrap; gap:9px; margin-top:18px; }
+.footer .socials a,.footer .tbarc-socials a {
+  width:35px; height:35px; border:1px solid rgba(255,255,255,.25);
+  border-radius:50%; display:flex; align-items:center; justify-content:center;
+  color:#e7f0e8;
+}
+.footer .socials svg,.footer .tbarc-socials svg {
+  width:16px !important; height:16px !important; display:block; flex:0 0 16px;
+}
+.footer-bottom,.copyright {
+  border-top:1px solid #355347 !important;
+  margin-top:0 !important; padding-top:17px !important;
+  color:#9fb3a5 !important; font:400 10px/1.7 "DM Sans",sans-serif !important;
+}
+@media(max-width:900px) {
+  .tbarc-hero-inner { gap:35px; }
+  .footer-grid { grid-template-columns:repeat(2,minmax(0,1fr)) !important; gap:28px !important; }
+}
+@media(max-width:640px) {
+  .tbarc-page-hero { min-height:0; }
+  .tbarc-hero-inner {
+    width:calc(100% - 40px); padding:52px 0;
+    grid-template-columns:1fr; gap:20px;
+  }
+  .tbarc-page-hero h1,.tbarc-page-hero .tbarc-hero-title { font-size:clamp(34px,10vw,46px); }
+  .tbarc-hero-description { border-left:0; border-top:1px solid rgba(255,255,255,.35); padding:18px 0 0; font-size:14px; }
+  .tbarc-hero-actions { margin-top:20px; }
+  .footer { padding:40px 0 18px !important; }
+  .footer-inner { width:calc(100% - 40px); }
+  .footer-grid { grid-template-columns:1fr !important; gap:24px !important; }
+}
+
   </style>
 </head>
 <body>
 <header class="site-header">
   <nav class="nav-wrap" aria-label="Main navigation">
-    <a class="brand" href="index.html" aria-label="TBARC home">
-      <img src="assets/logo.png" alt="TBARC logo">
+    <a class="brand" href="../" aria-label="TBARC home">
+      <img src="../assets/logo.png" alt="TBARC logo">
       <span class="brand-name">Tropical Biodiversity<span>Action and Research Center</span></span>
     </a>
     <div class="nav-links" id="primary-nav">
-      <a href="index.html">Home</a>
-      <a href="about/">About</a>
-      <a href="blog/">Blog</a>
-      <a href="gallery/">Gallery</a>
-      <a href="videos.html">Videos</a>
-      <a href="downloads.html" aria-current="page">Downloads</a>
-      <a href="bio-invasion.html">Bio-Invasion</a>
+      <a href="../">Home</a>
+      <a href="../about/">About</a>
+      <a href="../blog/">Blog</a>
+      <a href="../gallery/">Gallery</a>
+      <a href="../videos/">Videos</a>
+      <a href="../downloads/" aria-current="page">Downloads</a>
+      <a href="../bio-invasion.html">Bio-Invasion</a>
     </div>
     <a class="nav-cta" href="https://volunteer.tbarc.in/" target="_blank" rel="noopener noreferrer">Get Involved ↗</a>
     <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
@@ -53,12 +216,17 @@
   </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div class="eyebrow">Knowledge · Learning · Resources</div>
-    <h1>Resources for a more biodiverse future.</h1>
-    <p>Explore resources shared by the Tropical Biodiversity Action and Research Center to support ecological learning, research and conservation action.</p>
-    <div class="hero-rule"></div>
+<section class="tbarc-page-hero">
+  <div class="tbarc-hero-inner">
+    <div class="tbarc-hero-heading">
+      <span class="tbarc-hero-eyebrow">Knowledge · Learning · Resources</span>
+      <h1>Resources for a more biodiverse future.</h1>
+      
+    </div>
+    <div class="tbarc-hero-description">
+      <p>Explore resources shared by the Tropical Biodiversity Action and Research Center to support ecological learning, research and conservation action.</p>
+      
+    </div>
   </div>
 </section>
 
@@ -85,7 +253,7 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <img src="assets/logo.png" alt="TBARC logo">
+          <img src="../assets/logo.png" alt="TBARC logo">
           <div><h2>Tropical Biodiversity Action &amp; Research Center</h2><p>Research · Conservation · Community action</p></div>
         </div>
         <p class="footer-desc">Advancing biodiversity research, ecological awareness and conservation action through collaboration, education and field-based initiatives.</p>
@@ -99,10 +267,10 @@
       <div>
         <h3>Explore TBARC</h3>
         <div class="footer-links">
-          <a href="index.html">Home</a><a href="about/">About</a>
-          <a href="blog/">Blog</a><a href="gallery/">Gallery</a>
-          <a href="videos.html">Videos</a><a href="downloads.html">Downloads</a>
-          <a href="bio-invasion.html">Bio-Invasion</a>
+          <a href="../">Home</a><a href="../about/">About</a>
+          <a href="../blog/">Blog</a><a href="../gallery/">Gallery</a>
+          <a href="../videos/">Videos</a><a href="../downloads/">Downloads</a>
+          <a href="../bio-invasion.html">Bio-Invasion</a>
         </div>
       </div>
       <div>
