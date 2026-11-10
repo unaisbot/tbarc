@@ -112,10 +112,9 @@
           <div class="article-image"><img src="../assets/bird.jpg" alt="Bird species in a natural habitat"></div>
           <div class="article-body">
             <div class="article-meta"><span class="category">Species</span></div>
-            <span class="sample-label">Sample article</span>
             <h3>Understanding Invasive Species and Their Ecological Impacts</h3>
             <p>An introduction to the ecology, spread and impacts of invasive alien species in natural and human-modified landscapes.</p>
-            <span class="read-link">Article link to be added</span>
+            <a class="read-link" href="https://blog.tbarc.in/keralapiravi" target="_blank" rel="noopener">Read article <span aria-hidden="true">→</span></a>
           </div>
         </article>
 
@@ -123,10 +122,9 @@
           <div class="article-image"><img src="../assets/banner2.jpg" alt="Tropical wetland ecosystem"></div>
           <div class="article-body">
             <div class="article-meta"><span class="category">Ecosystems</span></div>
-            <span class="sample-label">Sample article</span>
             <h3>Wetlands: Living Landscapes That Sustain Biodiversity</h3>
             <p>Discover the ecological importance of wetlands and how they support diverse species, habitats and natural processes.</p>
-            <span class="read-link">Article link to be added</span>
+            <a class="read-link" href="https://blog.tbarc.in/keralapiravi" target="_blank" rel="noopener">Read article <span aria-hidden="true">→</span></a>
           </div>
         </article>
 
@@ -134,10 +132,9 @@
           <div class="article-image"><img src="../assets/gallery3.jpeg" alt="Green landscape providing ecosystem benefits"></div>
           <div class="article-body">
             <div class="article-meta"><span class="category">Ecosystem Services</span></div>
-            <span class="sample-label">Sample article</span>
             <h3>Nature’s Benefits: Why Ecosystem Services Matter</h3>
             <p>Explore how ecosystems contribute to clean water, food security, climate regulation, livelihoods and human well-being.</p>
-            <span class="read-link">Article link to be added</span>
+            <a class="read-link" href="https://blog.tbarc.in/keralapiravi" target="_blank" rel="noopener">Read article <span aria-hidden="true">→</span></a>
           </div>
         </article>
 
@@ -145,10 +142,9 @@
           <div class="article-image"><img src="../assets/gandhi.jpg" alt="Community participation and environmental awareness"></div>
           <div class="article-body">
             <div class="article-meta"><span class="category">Community</span></div>
-            <span class="sample-label">Sample article</span>
             <h3>People and Nature: Building a Community for Conservation</h3>
             <p>Stories and ideas on citizen science, local participation and collective action for a healthier environment.</p>
-            <span class="read-link">Article link to be added</span>
+            <a class="read-link" href="https://blog.tbarc.in/keralapiravi" target="_blank" rel="noopener">Read article <span aria-hidden="true">→</span></a>
           </div>
         </article>
 
@@ -156,10 +152,9 @@
           <div class="article-image"><img src="../assets/banner3.jpg" alt="Changing environment and climate"></div>
           <div class="article-body">
             <div class="article-meta"><span class="category">Climate</span></div>
-            <span class="sample-label">Sample article</span>
             <h3>Climate Change and the Future of Biodiversity</h3>
             <p>Learn how changing climate conditions influence species distributions, ecosystems and conservation priorities.</p>
-            <span class="read-link">Article link to be added</span>
+            <a class="read-link" href="https://blog.tbarc.in/keralapiravi" target="_blank" rel="noopener">Read article <span aria-hidden="true">→</span></a>
           </div>
         </article>
 
@@ -167,14 +162,13 @@
           <div class="article-image"><img src="../assets/banner4.jpg" alt="Biodiversity of Kerala"></div>
           <div class="article-body">
             <div class="article-meta"><span class="category">Biodiversity</span></div>
-            <span class="sample-label">Sample article</span>
             <h3>Celebrating Kerala’s Rich Natural Heritage</h3>
             <p>A closer look at the habitats, species and ecological connections that make Kerala exceptionally rich in biodiversity.</p>
-            <span class="read-link">Article link to be added</span>
+            <a class="read-link" href="https://blog.tbarc.in/keralapiravi" target="_blank" rel="noopener">Read article <span aria-hidden="true">→</span></a>
           </div>
         </article>
       </div>
-      <div class="no-posts" role="status" aria-live="polite">There are no sample articles in this topic yet.</div>
+      <div class="no-posts" role="status" aria-live="polite">There are no articles in this topic yet. Please explore another category.</div>
     </div>
   </section>
 
@@ -213,22 +207,31 @@
   menuButton.addEventListener('click',()=>{const expanded=menuButton.getAttribute('aria-expanded')==='true';menuButton.setAttribute('aria-expanded',String(!expanded));menuButton.setAttribute('aria-label',expanded?'Open navigation':'Close navigation');nav.classList.toggle('open',!expanded);});
   nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open navigation');}));
   const filterButtons=document.querySelectorAll('.topic-filter');
+  const latestPost=document.querySelector('.latest-post');
   const articleCards=document.querySelectorAll('#articleGrid .sample-card');
   const noPostsMessage=document.querySelector('.no-posts');
+
   filterButtons.forEach(button=>button.addEventListener('click',()=>{
     const selected=button.dataset.filter;
     let visibleCount=0;
+
     filterButtons.forEach(item=>{
       const active=item===button;
       item.classList.toggle('active',active);
       item.setAttribute('aria-pressed',String(active));
     });
+
+    // The featured Latest Post appears only when "All topics" is selected.
+    latestPost.style.display=selected==='all'?'grid':'none';
+
+    // Topic selections show only cards belonging to that category.
     articleCards.forEach(card=>{
       const matches=selected==='all'||card.dataset.category===selected;
       card.style.display=matches?'flex':'none';
       if(matches) visibleCount++;
     });
-    noPostsMessage.classList.toggle('show',visibleCount===0);
+
+    noPostsMessage.classList.toggle('show',selected!=='all'&&visibleCount===0);
   }));
   document.getElementById('year').textContent=new Date().getFullYear();
 </script>
