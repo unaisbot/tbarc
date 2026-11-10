@@ -116,7 +116,170 @@ h2{font:600 clamp(26px,3vw,38px)/1.15 "Playfair Display",serif;color:var(--fores
 .footer-bottom{flex-direction:column}
 }
 @media(max-width:420px){.archive-grid{grid-template-columns:1fr}.journal-image,.journal-image.tall{aspect-ratio:1.25}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}}
-</style>
+
+/* TBARC shared page-hero and footer treatment */
+.tbarc-page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-color: #173d32;
+  background-image: url('../assets/banner2.jpg');
+  background-position: center 48%;
+  background-size: cover;
+  border-radius: 0;
+}
+.tbarc-page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(5,32,17,.93) 0%, rgba(5,32,17,.78) 52%, rgba(5,32,17,.48) 100%);
+}
+.tbarc-hero-inner {
+  width: min(1200px, calc(100% - 60px));
+  margin: 0 auto;
+  padding: 64px 0;
+  display: grid;
+  grid-template-columns: minmax(0,1.15fr) minmax(260px,.75fr);
+  align-items: center;
+  gap: 64px;
+}
+.tbarc-hero-heading { min-width: 0; }
+.tbarc-hero-eyebrow {
+  display: inline-block;
+  color: #d8e9bd;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.tbarc-page-hero h1,
+.tbarc-page-hero .tbarc-hero-title {
+  color: #fff !important;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(38px, 5.2vw, 62px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -.045em;
+  margin: 18px 0 0;
+  max-width: 760px;
+  text-shadow: 0 2px 18px rgba(0,0,0,.18);
+}
+.tbarc-page-hero h1 span { color: #fff !important; }
+.tbarc-hero-description {
+  border-left: 1px solid rgba(255,255,255,.38);
+  padding: 5px 0 5px 25px;
+  color: rgba(255,255,255,.92);
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 510px;
+}
+.tbarc-hero-description p { color: inherit; margin: 0; }
+.tbarc-hero-description .tbarc-hero-note {
+  display: block;
+  margin-top: 18px;
+  color: #d8e9bd;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.tbarc-hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
+.tbarc-page-hero .tbarc-hero-actions a {
+  display:inline-flex; align-items:center; justify-content:center;
+  min-height:42px; padding:11px 18px; border-radius:4px;
+  font:700 13px/1.25 "DM Sans",sans-serif; text-decoration:none;
+}
+.tbarc-page-hero .tbarc-hero-actions a:first-child { background:#a7d86a; color:#163b22; }
+.tbarc-page-hero .tbarc-hero-actions a:last-child { background:#fff; color:#173d32; }
+.tbarc-page-hero .tbarc-hero-actions a:hover { transform:translateY(-2px); }
+
+/* Unified footer presentation; footer wording and links remain page-specific */
+.footer {
+  background: #102d25 !important;
+  color: #dce8dd !important;
+  padding: 54px 0 22px !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+.footer-inner {
+  width: min(1200px, calc(100% - 56px));
+  max-width: 1200px !important;
+  margin: 0 auto;
+  padding: 0 !important;
+}
+.footer-grid {
+  display: grid !important;
+  grid-template-columns: minmax(260px,1.45fr) minmax(130px,.7fr) minmax(150px,.8fr) minmax(210px,1fr) !important;
+  gap: 34px !important;
+  align-items: start;
+  padding-bottom: 34px;
+}
+.footer-brand { display:flex; align-items:center; gap:12px; margin-bottom:15px; }
+.footer-brand img { width:54px !important; height:54px !important; object-fit:contain; }
+.footer-brand strong,.footer-brand h2 {
+  display:block; margin:0; color:#fff !important;
+  font:800 14px/1.35 "Manrope",sans-serif !important;
+}
+.footer-brand small,.footer-brand p {
+  display:block; margin:4px 0 0; color:#b9cbbd !important;
+  font:500 11px/1.5 "DM Sans",sans-serif !important;
+}
+.footer-copy,.footer-desc,.footer-about p,.footer p,
+.footer-contact,.footer-contact p,.footer-contact-col {
+  color:#b9cbbd !important;
+  font:400 12px/1.8 "DM Sans",sans-serif !important;
+}
+.footer h3 {
+  margin:2px 0 15px !important; color:#fff !important;
+  font:700 12px/1.4 "Manrope",sans-serif !important;
+  letter-spacing:.1em; text-transform:uppercase;
+}
+.footer-links { display:grid; gap:8px; }
+.footer-links a,.footer a {
+  color:#c5d4c8; font:500 12px/1.65 "DM Sans",sans-serif;
+  text-decoration:none; transition:color .2s ease;
+}
+.footer-links a:hover,.footer a:hover { color:#fff; }
+.footer .socials,.footer .tbarc-socials { display:flex; flex-wrap:wrap; gap:9px; margin-top:18px; }
+.footer .socials a,.footer .tbarc-socials a {
+  width:35px; height:35px; border:1px solid rgba(255,255,255,.25);
+  border-radius:50%; display:flex; align-items:center; justify-content:center;
+  color:#e7f0e8;
+}
+.footer .socials svg,.footer .tbarc-socials svg {
+  width:16px !important; height:16px !important; display:block; flex:0 0 16px;
+}
+.footer-bottom,.copyright {
+  border-top:1px solid #355347 !important;
+  margin-top:0 !important; padding-top:17px !important;
+  color:#9fb3a5 !important; font:400 10px/1.7 "DM Sans",sans-serif !important;
+}
+@media(max-width:900px) {
+  .tbarc-hero-inner { gap:35px; }
+  .footer-grid { grid-template-columns:repeat(2,minmax(0,1fr)) !important; gap:28px !important; }
+}
+@media(max-width:640px) {
+  .tbarc-page-hero { min-height:0; }
+  .tbarc-hero-inner {
+    width:calc(100% - 40px); padding:52px 0;
+    grid-template-columns:1fr; gap:20px;
+  }
+  .tbarc-page-hero h1,.tbarc-page-hero .tbarc-hero-title { font-size:clamp(34px,10vw,46px); }
+  .tbarc-hero-description { border-left:0; border-top:1px solid rgba(255,255,255,.35); padding:18px 0 0; font-size:14px; }
+  .tbarc-hero-actions { margin-top:20px; }
+  .footer { padding:40px 0 18px !important; }
+  .footer-inner { width:calc(100% - 40px); }
+  .footer-grid { grid-template-columns:1fr !important; gap:24px !important; }
+}
+
+  </style>
 </head>
 <body>
 <header class="site-head">
@@ -124,16 +287,23 @@ h2{font:600 clamp(26px,3vw,38px)/1.15 "Playfair Display",serif;color:var(--fores
     <a class="brand" href="../"><img src="../assets/logo.png" alt="TBARC logo"><span class="brand-text">TROPICAL BIODIVERSITY<small>Action and Research Center</small></span></a>
     <button class="menu" id="menu" type="button" aria-expanded="false" aria-label="Open navigation">☰</button>
     <div class="nav-links" id="navLinks">
-      <a href="../">Home</a><a href="../about/">About</a><a href="../blog/">Blog</a><a href="./" aria-current="page">Gallery</a><a href="../videos.html">Videos</a><a href="../downloads.html">Downloads</a><a href="../bio-invasion.html">Bio-Invasion</a>
+      <a href="../">Home</a><a href="../about/">About</a><a href="../blog/">Blog</a><a href="./" aria-current="page">Gallery</a><a href="../videos/">Videos</a><a href="../downloads/">Downloads</a><a href="../bio-invasion.html">Bio-Invasion</a>
     </div>
     <a class="nav-action" href="https://volunteer.tbarc.in/" target="_blank" rel="noopener noreferrer">GET INVOLVED ↗</a>
   </nav>
 </header>
 
-<section class="masthead">
-  <div class="mast-inner">
-    <div><div class="overline">TBARC · Visual journal</div><h1>Field notes<br>in photographs.</h1></div>
-    <div class="mast-copy"><p>A visual record of the people, encounters and shared experiences behind biodiversity research and conservation. From learning spaces to community programmes, these moments reflect the work that happens together.</p><span>Research · Conservation · Community</span></div>
+<section class="tbarc-page-hero">
+  <div class="tbarc-hero-inner">
+    <div class="tbarc-hero-heading">
+      <span class="tbarc-hero-eyebrow">TBARC · Visual journal</span>
+      <h1>Field notes<br>in photographs.</h1>
+      
+    </div>
+    <div class="tbarc-hero-description">
+      <p>A visual record of the people, encounters and shared experiences behind biodiversity research and conservation. From learning spaces to community programmes, these moments reflect the work that happens together.</p>
+      <span class="tbarc-hero-note">Research · Conservation · Community</span>
+    </div>
   </div>
 </section>
 
@@ -321,7 +491,7 @@ h2{font:600 clamp(26px,3vw,38px)/1.15 "Playfair Display",serif;color:var(--fores
           <a href="https://www.linkedin.com/company/tbarcindia" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M5.2 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3.5 9h3.4v11.5H3.5zM9 9h3.2v1.6h.1A3.5 3.5 0 0 1 15.5 8c3.5 0 4.1 2.3 4.1 5.2v7.3h-3.4V14c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3v6.6H9z"/></svg></a>
         </div>
       </div>
-      <div><h3>Explore TBARC</h3><div class="footer-links"><a href="../">Home</a><a href="../about/">About</a><a href="../blog/">Blog</a><a href="./">Gallery</a><a href="../videos.html">Videos</a><a href="../downloads.html">Downloads</a><a href="../bio-invasion.html">Bio-Invasion</a></div></div>
+      <div><h3>Explore TBARC</h3><div class="footer-links"><a href="../">Home</a><a href="../about/">About</a><a href="../blog/">Blog</a><a href="./">Gallery</a><a href="../videos/">Videos</a><a href="../downloads/">Downloads</a><a href="../bio-invasion.html">Bio-Invasion</a></div></div>
       <div class="footer-contact"><h3>Contact</h3><p><a href="mailto:tbarcindia@gmail.com">tbarcindia@gmail.com</a></p><p>Appolo, Mampad College PO,<br>Nilambur, Kerala 676542, India</p><p>Connect with us for research, volunteering and conservation initiatives.</p></div>
     </div>
     <div class="footer-bottom"><span>© 2026 Tropical Biodiversity Action &amp; Research Center. All rights reserved.</span><span>Built for biodiversity and people.</span></div>
