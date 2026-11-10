@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Watch TBARC webinars, biodiversity awareness videos, environmental talks and educational sessions.">
+<meta name="theme-color" content="#142f29">
+<link rel="canonical" href="https://tbarc.in/videos.html">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<title>Video Journal | TBARC</title>
+<style>
+:root{--forest:#173f32;--deep:#102b25;--paper:#f8f9f4;--white:#fff;--ink:#1d2b24;--muted:#718076;--line:#e1e7df;--gold:#c8a86c;--sage:#eaf0e8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(248,249,244,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{max-width:1280px;margin:auto;padding:14px 30px;min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand img{width:44px;height:44px;object-fit:contain}
+.brand strong{display:block;font:800 12px/1.35 "Manrope",sans-serif;color:var(--forest);letter-spacing:.03em}
+.brand small{display:block;margin-top:3px;color:#758177;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:23px}
+.nav-links a{font-size:12px;font-weight:600;color:#56645a}
+.nav-links a:hover,.nav-links a[aria-current="page"]{color:#4f805b}
+.nav-links a[aria-current="page"]{border-bottom:1px solid var(--gold);padding-bottom:5px}
+.nav-cta{padding:10px 15px;border:1px solid #c4d0c3;border-radius:2px;color:var(--forest);font-size:11px;font-weight:700;white-space:nowrap}
+.menu-toggle{display:none;border:1px solid var(--line);background:transparent;color:var(--forest);padding:8px 11px;border-radius:4px;font-size:20px}
+.hero{background:var(--deep);color:white;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:520px;height:520px;right:-140px;top:-340px;border:1px solid rgba(255,255,255,.12);border-radius:50%;box-shadow:0 0 0 55px rgba(255,255,255,.025),0 0 0 110px rgba(255,255,255,.018)}
+.hero-inner{position:relative;z-index:1;max-width:1280px;margin:auto;padding:75px 30px 68px;display:grid;grid-template-columns:1fr .7fr;gap:70px;align-items:end}
+.eyebrow{display:flex;align-items:center;gap:11px;color:#d2bb8c;font-size:10px;font-weight:700;letter-spacing:.19em;text-transform:uppercase}
+.eyebrow:before{content:"";width:28px;height:1px;background:var(--gold)}
+h1{margin:22px 0 0;font:600 clamp(48px,6vw,76px)/1.02 "Playfair Display",serif;letter-spacing:-.035em;max-width:720px}
+.hero-copy{border-left:1px solid rgba(255,255,255,.25);padding:4px 0 4px 24px;margin-bottom:4px}
+.hero-copy p{margin:0;color:#d2ded5;font-size:14px;line-height:1.9}
+.hero-copy span{display:block;margin-top:18px;color:#d2bb8c;font-size:10px;letter-spacing:.14em;font-weight:700;text-transform:uppercase}
+.feature-wrap{max-width:1280px;margin:auto;padding:56px 30px 60px}
+.section-label{margin:0 0 9px;color:#6c8c70;font-size:10px;font-weight:800;letter-spacing:.17em;text-transform:uppercase}
+h2{margin:0;color:var(--forest);font:600 clamp(27px,3vw,38px)/1.15 "Playfair Display",serif}
+.feature-heading{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:25px}
+.feature-heading p{max-width:390px;margin:0;color:var(--muted);font-size:12px;line-height:1.8}
+.featured{display:grid;grid-template-columns:1.55fr .75fr;background:#fff;border:1px solid var(--line);box-shadow:0 12px 35px rgba(25,50,34,.06)}
+.featured-thumb{position:relative;display:block;width:100%;padding:0;border:0;background:#dfe7df;aspect-ratio:16/9;cursor:pointer;overflow:hidden}
+.featured-thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.featured-thumb:hover img{transform:scale(1.025)}
+.play-button{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.95);color:var(--forest);box-shadow:0 5px 25px rgba(0,0,0,.2);transition:transform .2s}
+.play-button span{font-size:20px;margin-left:4px}
+.featured-thumb:hover .play-button,.thumb-button:hover .play-button{transform:translate(-50%,-50%) scale(1.08)}
+.featured-tag{position:absolute;left:17px;top:17px;padding:8px 11px;background:var(--paper);color:var(--forest);font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.featured-copy{padding:34px;display:flex;flex-direction:column;justify-content:center}
+.featured-copy .number{color:var(--gold);font:500 13px "Playfair Display",serif;letter-spacing:.12em}
+.featured-copy h3{margin:17px 0 14px;color:var(--forest);font:600 clamp(24px,2.6vw,34px)/1.2 "Playfair Display",serif}
+.featured-copy p{margin:0;color:var(--muted);font-size:12px;line-height:1.8}
+.featured-copy button{align-self:flex-start;margin-top:24px;border:0;border-bottom:1px solid var(--gold);padding:0 0 7px;background:transparent;color:var(--forest);font-size:11px;font-weight:800;cursor:pointer}
+.library{background:#eef1eb;padding:58px 0 72px}
+.library-inner{max-width:1280px;margin:auto;padding:0 30px}
+.library-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:28px}
+.library-head p{max-width:390px;margin:0;color:var(--muted);font-size:12px;line-height:1.8}
+.video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.video-card{background:#fff;border:1px solid #e0e6de;min-width:0;transition:transform .25s,box-shadow .25s}
+.video-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(25,50,34,.09)}
+.thumb-button{position:relative;display:block;width:100%;padding:0;border:0;aspect-ratio:16/9;background:#dce5dc;overflow:hidden;cursor:pointer}
+.thumb-button img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .5s}
+.thumb-button:hover img{transform:scale(1.04)}
+.thumb-button .play-button{width:48px;height:48px}
+.thumb-button .play-button span{font-size:15px}
+.video-number{position:absolute;left:12px;top:12px;background:rgba(248,249,244,.94);padding:6px 8px;color:var(--forest);font:500 11px "Playfair Display",serif}
+.video-card-body{padding:18px 19px 20px}
+.card-kicker{margin:0 0 9px;color:#809080;font-size:9px;font-weight:800;letter-spacing:.14em}
+.video-card h3{min-height:48px;margin:0;color:var(--forest);font:600 17px/1.35 "Manrope",sans-serif}
+.watch-link{margin-top:16px;padding:0 0 6px;border:0;border-bottom:1px solid var(--gold);background:transparent;color:#466c50;font-size:11px;font-weight:800;cursor:pointer}
+.watch-link span{margin-left:8px}
+.subscribe{max-width:1280px;margin:auto;padding:58px 30px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.subscribe h2{font-size:30px}
+.subscribe p{max-width:630px;margin:10px 0 0;color:var(--muted);font-size:12px;line-height:1.8}
+.subscribe a{padding:13px 18px;background:var(--forest);color:white;font-size:11px;font-weight:800;white-space:nowrap}
+.footer{background:#102720;color:#d7e1d8}
+.footer-inner{max-width:1280px;margin:auto;padding:48px 30px 20px}
+.footer-grid{display:grid;grid-template-columns:1.5fr .7fr 1fr;gap:50px}
+.footer-brand{display:flex;align-items:center;gap:11px;margin-bottom:15px}
+.footer-brand img{width:43px;height:43px;object-fit:contain}
+.footer-brand strong{display:block;color:white;font:700 13px "Manrope",sans-serif}
+.footer-brand small{display:block;color:#b4c4b7;font-size:10px;margin-top:4px}
+.footer-copy,.footer-links a,.footer-contact p,.footer-contact a{font-size:12px;line-height:1.8;color:#b9c9bd}
+.footer-copy{max-width:380px;margin:0}
+.footer h3{margin:0 0 15px;color:white;font:700 12px "Manrope",sans-serif}
+.footer-links{display:grid;gap:7px}
+.footer-links a:hover,.footer-contact a:hover{color:white}
+.socials{display:flex;gap:9px;margin-top:18px}
+.socials a{width:34px;height:34px;border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;border-radius:50%}
+.socials svg{width:16px;height:16px;display:block;fill:currentColor}
+.footer-contact p{margin:0 0 8px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:35px;padding-top:16px;display:flex;justify-content:space-between;gap:15px;color:#9eafa2;font-size:10px}
+.player-modal{position:fixed;inset:0;z-index:100;background:rgba(5,17,13,.96);display:none;align-items:center;justify-content:center;padding:25px}
+.player-modal.open{display:flex}
+.player-box{width:min(100%,1050px);position:relative}
+.player-frame{width:100%;aspect-ratio:16/9;background:#000;border:0;display:block}
+.player-close{position:absolute;right:0;bottom:calc(100% + 12px);width:40px;height:40px;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:23px;cursor:pointer}
+.player-title{color:white;font:500 14px "Manrope",sans-serif;margin:14px 0 0}
+@media(max-width:900px){.nav-links{gap:13px}.nav-links a{font-size:11px}.featured-copy{padding:24px}.video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){
+.nav{padding:11px 18px}.menu-toggle{display:block}.nav-cta{display:none}
+.nav-links{display:none;position:absolute;top:69px;left:0;right:0;background:var(--paper);padding:14px 22px 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid var(--line)}
+.nav-links.open{display:flex}.nav-links a{padding:10px 0;font-size:13px}
+.hero-inner{padding:54px 21px 48px;grid-template-columns:1fr;gap:24px}h1{font-size:53px}.hero-copy{padding-left:17px}
+.feature-wrap{padding:40px 18px 45px}.feature-heading{display:block}.feature-heading p{margin-top:11px}
+.featured{grid-template-columns:1fr}.featured-copy{padding:22px}.featured-copy h3{margin:11px 0}
+.library{padding:42px 0 52px}.library-inner{padding:0 18px}.library-head{display:block}.library-head p{margin-top:10px}
+.video-grid{grid-template-columns:1fr;gap:17px}.video-card h3{min-height:0}
+.subscribe{padding:42px 18px;align-items:flex-start;flex-direction:column}
+.footer-inner{padding:40px 18px 18px}.footer-grid{grid-template-columns:1fr 1fr;gap:27px 18px}.footer-grid>div:first-child{grid-column:1/-1}.footer-bottom{flex-direction:column}
+}
+@media(max-width:420px){.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="./"><img src="assets/logo.png" alt="TBARC logo"><span><strong>TROPICAL BIODIVERSITY</strong><small>Action and Research Center</small></span></a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="./">Home</a><a href="about/">About</a><a href="blog/">Blog</a><a href="gallery/">Gallery</a>
+      <a href="videos.html" aria-current="page">Videos</a><a href="downloads.html">Downloads</a><a href="bio-invasion.html">Bio-Invasion</a>
+    </div>
+    <a class="nav-cta" href="https://volunteer.tbarc.in/" target="_blank" rel="noopener noreferrer">GET INVOLVED ↗</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div><span class="eyebrow">Watch · Discover · Learn</span><h1>Ideas and action,<br>in motion.</h1></div>
+    <div class="hero-copy"><p>Explore talks, webinars and visual stories from TBARC. A growing collection of conversations and learning resources on biodiversity, ecology and environmental action.</p><span>TBARC video journal</span></div>
+  </div>
+</section>
+
+<main>
+  <section class="feature-wrap">
+    <div class="feature-heading">
+      <div><p class="section-label">Featured session</p><h2>Watch &amp; explore</h2></div>
+      <p>Selected talks and sessions from the TBARC video collection. Choose a video to watch it here.</p>
+    </div>
+    <div class="featured">
+      <button class="featured-thumb" type="button" data-video="0" aria-label="Play featured video: Mental Health Day Webinar ( Malayalam)">
+        <img src="https://i.ytimg.com/vi/kTQ9AtiK_z4/maxresdefault.jpg" alt="YouTube thumbnail for Mental Health Day Webinar ( Malayalam)" fetchpriority="high">
+        <span class="featured-tag">Featured video · 01</span><span class="play-button"><span>▶</span></span>
+      </button>
+      <div class="featured-copy">
+        <span class="number">01 / TBARC VIDEO LIBRARY</span>
+        <h3>Mental Health Day Webinar ( Malayalam)</h3>
+        <p>Watch this session from the TBARC video archive.</p>
+        <button type="button" data-video="0">PLAY VIDEO ↗</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="library">
+    <div class="library-inner">
+      <div class="library-head"><div><p class="section-label">Explore the collection</p><h2>More from TBARC</h2></div><p>Webinars, nature stories, awareness sessions and conversations. Select any thumbnail to open the video player.</p></div>
+      <div class="video-grid">
+
+      <article class="video-card">
+        <button class="thumb-button" type="button" data-video="1" aria-label="Play A Journey From Coal to Stars">
+          <img src="https://i.ytimg.com/vi/FeI5YhD374o/hqdefault.jpg" alt="YouTube thumbnail for A Journey From Coal to Stars" loading="lazy">
+          <span class="play-button" aria-hidden="true"><span>▶</span></span>
+          <span class="video-number">02</span>
+        </button>
+        <div class="video-card-body">
+          <p class="card-kicker">TBARC VIDEO LIBRARY</p>
+          <h3>A Journey From Coal to Stars</h3>
+          <button class="watch-link" type="button" data-video="1">Watch video <span>↗</span></button>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <button class="thumb-button" type="button" data-video="2" aria-label="Play Buzz for the plant: Meet the pollinating heroes">
+          <img src="https://i.ytimg.com/vi/ZVOKCBTo9ls/hqdefault.jpg" alt="YouTube thumbnail for Buzz for the plant: Meet the pollinating heroes" loading="lazy">
+          <span class="play-button" aria-hidden="true"><span>▶</span></span>
+          <span class="video-number">03</span>
+        </button>
+        <div class="video-card-body">
+          <p class="card-kicker">TBARC VIDEO LIBRARY</p>
+          <h3>Buzz for the plant: Meet the pollinating heroes</h3>
+          <button class="watch-link" type="button" data-video="2">Watch video <span>↗</span></button>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <button class="thumb-button" type="button" data-video="3" aria-label="Play The Un-noticed Commoner Part 2">
+          <img src="https://i.ytimg.com/vi/feOfJEHEtFE/hqdefault.jpg" alt="YouTube thumbnail for The Un-noticed Commoner Part 2" loading="lazy">
+          <span class="play-button" aria-hidden="true"><span>▶</span></span>
+          <span class="video-number">04</span>
+        </button>
+        <div class="video-card-body">
+          <p class="card-kicker">TBARC VIDEO LIBRARY</p>
+          <h3>The Un-noticed Commoner Part 2</h3>
+          <button class="watch-link" type="button" data-video="3">Watch video <span>↗</span></button>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <button class="thumb-button" type="button" data-video="4" aria-label="Play The Un-noticed Commoner Part 1">
+          <img src="https://i.ytimg.com/vi/yJWTtvyfuDE/hqdefault.jpg" alt="YouTube thumbnail for The Un-noticed Commoner Part 1" loading="lazy">
+          <span class="play-button" aria-hidden="true"><span>▶</span></span>
+          <span class="video-number">05</span>
+        </button>
+        <div class="video-card-body">
+          <p class="card-kicker">TBARC VIDEO LIBRARY</p>
+          <h3>The Un-noticed Commoner Part 1</h3>
+          <button class="watch-link" type="button" data-video="4">Watch video <span>↗</span></button>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <button class="thumb-button" type="button" data-video="5" aria-label="Play Know our Giants: ' Elephants '">
+          <img src="https://i.ytimg.com/vi/52rx1SZUqfk/hqdefault.jpg" alt="YouTube thumbnail for Know our Giants: ' Elephants '" loading="lazy">
+          <span class="play-button" aria-hidden="true"><span>▶</span></span>
+          <span class="video-number">06</span>
+        </button>
+        <div class="video-card-body">
+          <p class="card-kicker">TBARC VIDEO LIBRARY</p>
+          <h3>Know our Giants: ' Elephants '</h3>
+          <button class="watch-link" type="button" data-video="5">Watch video <span>↗</span></button>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <button class="thumb-button" type="button" data-video="6" aria-label="Play Environmental day Webinar 2026">
+          <img src="https://i.ytimg.com/vi/TqbDkY1k5go/hqdefault.jpg" alt="YouTube thumbnail for Environmental day Webinar 2026" loading="lazy">
+          <span class="play-button" aria-hidden="true"><span>▶</span></span>
+          <span class="video-number">07</span>
+        </button>
+        <div class="video-card-body">
+          <p class="card-kicker">TBARC VIDEO LIBRARY</p>
+          <h3>Environmental day Webinar 2026</h3>
+          <button class="watch-link" type="button" data-video="6">Watch video <span>↗</span></button>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <button class="thumb-button" type="button" data-video="7" aria-label="Play Harnessing AI for a Resilent Earth Jishna M">
+          <img src="https://i.ytimg.com/vi/Zb3UuK04VY4/hqdefault.jpg" alt="YouTube thumbnail for Harnessing AI for a Resilent Earth Jishna M" loading="lazy">
+          <span class="play-button" aria-hidden="true"><span>▶</span></span>
+          <span class="video-number">08</span>
+        </button>
+        <div class="video-card-body">
+          <p class="card-kicker">TBARC VIDEO LIBRARY</p>
+          <h3>Harnessing AI for a Resilent Earth Jishna M</h3>
+          <button class="watch-link" type="button" data-video="7">Watch video <span>↗</span></button>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <button class="thumb-button" type="button" data-video="8" aria-label="Play Geoinformatics for Ecologists | Dr. Harshid P | GIS & Remote Sensing Webinar">
+          <img src="https://i.ytimg.com/vi/Z8FGaTJJ-gw/hqdefault.jpg" alt="YouTube thumbnail for Geoinformatics for Ecologists | Dr. Harshid P | GIS & Remote Sensing Webinar" loading="lazy">
+          <span class="play-button" aria-hidden="true"><span>▶</span></span>
+          <span class="video-number">09</span>
+        </button>
+        <div class="video-card-body">
+          <p class="card-kicker">TBARC VIDEO LIBRARY</p>
+          <h3>Geoinformatics for Ecologists | Dr. Harshid P | GIS &amp; Remote Sensing Webinar</h3>
+          <button class="watch-link" type="button" data-video="8">Watch video <span>↗</span></button>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="subscribe">
+    <div><p class="section-label">Stay in the loop</p><h2>More knowledge. More perspectives.</h2><p>Follow the TBARC YouTube channel for new webinars, biodiversity stories, educational sessions and environmental conversations.</p></div>
+    <a href="https://www.youtube.com/@tbarcindia" target="_blank" rel="noopener noreferrer">VISIT TBARC ON YOUTUBE ↗</a>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div><div class="footer-brand"><img src="assets/logo.png" alt="TBARC logo"><span><strong>Tropical Biodiversity Action &amp; Research Center</strong><small>Research · Conservation · Community action</small></span></div>
+        <p class="footer-copy">Advancing biodiversity research, ecological awareness and conservation action through collaboration, education and field-based initiatives.</p>
+        <div class="socials">
+          <a href="https://facebook.com/tbarcindia" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2H7.3V13h2.8v8z"/></svg></a>
+          <a href="https://www.instagram.com/tbarcindia/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2"/></svg></a>
+          <a href="https://www.youtube.com/@tbarcindia" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6z"/></svg></a>
+          <a href="https://www.linkedin.com/company/tbarcindia" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M5.2 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3.5 9h3.4v11.5H3.5zM9 9h3.2v1.6h.1A3.5 3.5 0 0 1 15.5 8c3.5 0 4.1 2.3 4.1 5.2v7.3h-3.4V14c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3v6.6H9z"/></svg></a>
+        </div>
+      </div>
+      <div><h3>Explore TBARC</h3><div class="footer-links"><a href="./">Home</a><a href="about/">About</a><a href="blog/">Blog</a><a href="gallery/">Gallery</a><a href="videos.html">Videos</a><a href="downloads.html">Downloads</a><a href="bio-invasion.html">Bio-Invasion</a></div></div>
+      <div class="footer-contact"><h3>Contact</h3><p><a href="mailto:tbarcindia@gmail.com">tbarcindia@gmail.com</a></p><p>Appolo, Mampad College PO,<br>Nilambur, Kerala 676542, India</p><p>Connect with us for research, volunteering and conservation initiatives.</p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Tropical Biodiversity Action &amp; Research Center. All rights reserved.</span><span>Built for biodiversity and people.</span></div>
+  </div>
+</footer>
+
+<div class="player-modal" id="playerModal" role="dialog" aria-modal="true" aria-label="YouTube video player">
+  <div class="player-box">
+    <button class="player-close" id="playerClose" type="button" aria-label="Close video">×</button>
+    <iframe class="player-frame" id="playerFrame" src="" title="TBARC YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p class="player-title" id="playerTitle"></p>
+  </div>
+</div>
+
+<script>
+const videoItems = [{"title": "Mental Health Day Webinar ( Malayalam)", "id": "kTQ9AtiK_z4"}, {"title": "A Journey From Coal to Stars", "id": "FeI5YhD374o"}, {"title": "Buzz for the plant: Meet the pollinating heroes", "id": "ZVOKCBTo9ls"}, {"title": "The Un-noticed Commoner Part 2", "id": "feOfJEHEtFE"}, {"title": "The Un-noticed Commoner Part 1", "id": "yJWTtvyfuDE"}, {"title": "Know our Giants: ' Elephants '", "id": "52rx1SZUqfk"}, {"title": "Environmental day Webinar 2026", "id": "TqbDkY1k5go"}, {"title": "Harnessing AI for a Resilent Earth Jishna M", "id": "Zb3UuK04VY4"}, {"title": "Geoinformatics for Ecologists | Dr. Harshid P | GIS & Remote Sensing Webinar", "id": "Z8FGaTJJ-gw"}];
+const modal = document.getElementById("playerModal");
+const frame = document.getElementById("playerFrame");
+const title = document.getElementById("playerTitle");
+function openVideo(index) {
+  const video = videoItems[index];
+  if (!video) return;
+  frame.src = `https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&rel=0`;
+  frame.title = video.title;
+  title.textContent = video.title;
+  modal.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function closeVideo() {
+  modal.classList.remove("open");
+  frame.src = "";
+  document.body.style.overflow = "";
+}
+document.querySelectorAll("[data-video]").forEach(button => {
+  button.addEventListener("click", () => openVideo(Number(button.dataset.video)));
+});
+document.getElementById("playerClose").addEventListener("click", closeVideo);
+modal.addEventListener("click", event => { if (event.target === modal) closeVideo(); });
+document.addEventListener("keydown", event => { if (event.key === "Escape" && modal.classList.contains("open")) closeVideo(); });
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+menuToggle.addEventListener("click", () => {
+  const opened = navLinks.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(opened));
+  menuToggle.setAttribute("aria-label", opened ? "Close navigation" : "Open navigation");
+  menuToggle.textContent = opened ? "×" : "☰";
+});
+</script>
+</body>
+</html>
