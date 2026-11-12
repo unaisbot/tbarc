@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="The TBARC visual journal: photographs documenting biodiversity engagement, conservation activities, field learning and community programmes.">
+<meta name="description" content="Explore TBARC photographs, featured videos, webinars and biodiversity learning sessions.">
 <meta name="theme-color" content="#142f29">
 <link rel="canonical" href="https://tbarc.in/gallery/">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<title>Visual Journal | TBARC</title>
+<title>Gallery | TBARC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
@@ -278,7 +278,52 @@ h2{font:600 clamp(26px,3vw,38px)/1.15 "Playfair Display",serif;color:var(--fores
   .footer-grid { grid-template-columns:1fr !important; gap:24px !important; }
 }
 
-  </style>
+  
+/* Consolidated photo and video gallery */
+.feature-wrap{max-width:1280px;margin:auto;padding:54px 30px 58px}
+.feature-heading,.library-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:25px}
+.feature-heading p,.library-head p{max-width:390px;margin:0;color:var(--muted);font-size:12px;line-height:1.8}
+.featured{display:grid;grid-template-columns:1.5fr .8fr;background:#fff;border:1px solid var(--line);box-shadow:0 12px 35px rgba(25,50,34,.06)}
+.featured-thumb,.thumb-button{position:relative;display:block;width:100%;padding:0;border:0;background:#dfe7df;aspect-ratio:16/9;cursor:pointer;overflow:hidden}
+.featured-thumb img,.thumb-button img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.featured-thumb:hover img,.thumb-button:hover img{transform:scale(1.03)}
+.play-button{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.95);color:var(--forest);box-shadow:0 5px 25px rgba(0,0,0,.2)}
+.play-button span{font-size:19px;margin-left:3px}
+.featured-tag{position:absolute;left:16px;top:16px;padding:8px 11px;background:var(--paper);color:var(--forest);font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.featured-copy{padding:30px;display:flex;flex-direction:column;justify-content:center}
+.featured-copy .number{color:var(--gold);font:500 12px "Playfair Display",serif;letter-spacing:.12em}
+.featured-copy h3{margin:15px 0;color:var(--forest);font:600 clamp(23px,2.5vw,33px)/1.2 "Playfair Display",serif}
+.featured-copy p{margin:0;color:var(--muted);font-size:12px;line-height:1.8}
+.featured-copy button,.watch-link{align-self:flex-start;margin-top:20px;border:0;border-bottom:1px solid var(--gold);padding:0 0 7px;background:transparent;color:var(--forest);font-size:11px;font-weight:800;cursor:pointer}
+.archive{background:#eef0e9;padding:52px 0 68px}
+.archive-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:25px}
+.archive-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.entry{min-width:0}
+.journal-image{position:relative;display:block;width:100%;aspect-ratio:1.15;overflow:hidden;background:#dce4dc}
+.journal-image img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .5s}
+.journal-image:hover img{transform:scale(1.04)}
+.instagram-overlay{position:absolute;inset:auto 0 0;padding:13px 15px;background:linear-gradient(transparent,rgba(5,30,17,.8));color:#fff;font-size:11px;font-weight:800;letter-spacing:.04em;opacity:0;transition:opacity .2s}
+.journal-image:hover .instagram-overlay,.journal-image:focus-visible .instagram-overlay{opacity:1}
+.library{background:#f7f7f1;padding:56px 0 70px}
+.library-inner{max-width:1280px;margin:auto;padding:0 34px}
+.video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.video-card{background:#fff;border:1px solid var(--line);min-width:0;transition:transform .2s,box-shadow .2s}
+.video-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(25,50,34,.08)}
+.video-card-body{padding:17px 18px 19px}
+.video-card h3{min-height:44px;margin:0;color:var(--forest);font:700 15px/1.4 "Manrope",sans-serif}
+.video-card .watch-link{margin-top:13px}
+.subscribe{max-width:1280px;margin:auto;padding:54px 30px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.subscribe h2{font-size:30px}.subscribe p{max-width:630px;margin:10px 0 0;color:var(--muted);font-size:12px;line-height:1.8}
+.subscribe a{padding:13px 18px;background:var(--forest);color:white;font-size:11px;font-weight:800;white-space:nowrap}
+.player-modal{position:fixed;inset:0;z-index:100;background:rgba(5,17,13,.96);display:none;align-items:center;justify-content:center;padding:25px}
+.player-modal.open{display:flex}.player-box{width:min(100%,1050px);position:relative}
+.player-frame{width:100%;aspect-ratio:16/9;background:#000;border:0;display:block}
+.player-close{position:absolute;right:0;bottom:calc(100% + 12px);width:40px;height:40px;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:23px;cursor:pointer}
+.player-title{color:white;font:500 14px "Manrope",sans-serif;margin:14px 0 0}
+@media(max-width:900px){.featured-copy{padding:22px}.video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.archive-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.feature-wrap{padding:40px 18px 45px}.feature-heading,.library-head{display:block}.feature-heading p,.library-head p{margin-top:10px}.featured{grid-template-columns:1fr}.featured-copy{padding:21px}.archive{padding:42px 0 52px}.archive-inner{padding:0 18px}.archive-grid{gap:13px}.journal-image{aspect-ratio:1}.library{padding:42px 0 52px}.library-inner{padding:0 18px}.video-grid{grid-template-columns:1fr;gap:16px}.video-card h3{min-height:0}.subscribe{padding:42px 18px;align-items:flex-start;flex-direction:column}}
+@media(max-width:420px){.archive-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.journal-image{aspect-ratio:.9}}
+</style>
 <style>
 /* TBARC shared navigation — consistent across all pages */
 .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(226,234,224,.85)}
@@ -647,7 +692,7 @@ html body header.site-header button.menu-toggle {
 <header class="site-header">
   <div class="container nav-wrap">
     <a class="brand" href="../" aria-label="TBARC home"><img src="../assets/logo2.png" alt="TBARC logo"><span class="brand-name">Tropical <span>Biodiversity</span><br>Action &amp; Research Center</span></a>
-    <nav class="nav-links" id="primary-navigation" aria-label="Main navigation"><a href="../">Home</a><a href="../about/">About</a><a href="../blog/">Blog</a><a class="active" href="../gallery/" aria-current="page">Gallery</a><a href="../videos/">Videos</a><a href="../downloads/">Downloads</a><a href="../bio-invasion.html">Bio-Invasion</a></nav>
+    <nav class="nav-links" id="primary-navigation" aria-label="Main navigation"><a href="https://events.tbarc.in/">Events</a><a href="../blog/">Blog</a><a href="../gallery/" class="active" aria-current="page">Gallery</a><a href="../bio-invasion.html">Bioinvasion</a></nav>
     <a class="btn btn-primary nav-cta" href="https://volunteer.tbarc.in/" target="_blank" rel="noopener">Get involved <span class="arrow">↗</span></a>
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
@@ -667,179 +712,202 @@ html body header.site-header button.menu-toggle {
   </div>
 </section>
 
-<section class="journal-intro">
-  <div><p class="section-label">The TBARC journal / 01</p><h2>People, participation &amp; purpose.</h2></div>
-  <p class="intro-note">A curated visual archive of TBARC activities. Each image links back to its original post, keeping the story connected to the moment it was shared.</p>
-</section>
-
-<section class="feature">
-  <div>
-    <button class="feature-image" type="button" data-photo="0" aria-label="Open featured TBARC archive photograph">
-      <img src="../assets/img17.heic" alt="Featured photograph from the TBARC visual archive" fetchpriority="high">
-      <span class="feature-tag">From the archive · Featured frame</span>
-    </button>
-    <div class="feature-caption"><span>TBARC VISUAL ARCHIVE</span><a class="text-link" href="https://www.instagram.com/p/DOTaEnSkcH0/" target="_blank" rel="noopener noreferrer">View original post ↗</a></div>
-  </div>
-  <div class="feature-copy"><span class="number">01 / VISUAL RECORD</span><h3>Documenting the work. Remembering the moments.</h3><p>Every programme is shaped by people who participate, share knowledge and contribute to conservation. This journal brings together a selection of those moments from TBARC's public activity archive.</p><a class="text-link" href="https://www.instagram.com/tbarcindia/" target="_blank" rel="noopener noreferrer">Explore TBARC on Instagram ↗</a></div>
-</section>
-
-<section class="archive">
-  <div class="archive-inner">
-    <div class="archive-head"><div><p class="section-label">Selected frames</p><h2>From our shared archive.</h2></div><p>Browse the collection at your own pace. Open an image for a closer view, or follow the link to its original Instagram post.</p></div>
-    <div class="archive-grid">
-
-      <article class="entry">
-        <button class="journal-image" type="button" data-photo="1" aria-label="Open archive photograph 02">
-          <img src="../assets/img16.jpg" alt="TBARC archive photograph 02" loading="lazy">
-          <span class="image-index">02</span>
-          <span class="image-open">View image ↗</span>
-        </button>
-        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DOllERaE5I7/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
-      </article>
-
-      <article class="entry">
-        <button class="journal-image tall" type="button" data-photo="2" aria-label="Open archive photograph 03">
-          <img src="../assets/img15.jpg" alt="TBARC archive photograph 03" loading="lazy">
-          <span class="image-index">03</span>
-          <span class="image-open">View image ↗</span>
-        </button>
-        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DOaSegTjLjW/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
-      </article>
-
-      <article class="entry">
-        <button class="journal-image" type="button" data-photo="3" aria-label="Open archive photograph 04">
-          <img src="../assets/img14.jpg" alt="TBARC archive photograph 04" loading="lazy">
-          <span class="image-index">04</span>
-          <span class="image-open">View image ↗</span>
-        </button>
-        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DOYj2DPEfSy/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
-      </article>
-
-      <article class="entry">
-        <button class="journal-image" type="button" data-photo="4" aria-label="Open archive photograph 05">
-          <img src="../assets/img13.jpg" alt="TBARC archive photograph 05" loading="lazy">
-          <span class="image-index">05</span>
-          <span class="image-open">View image ↗</span>
-        </button>
-        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DOTaEnSkcH0/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
-      </article>
-
-      <article class="entry">
-        <button class="journal-image tall" type="button" data-photo="5" aria-label="Open archive photograph 06">
-          <img src="../assets/img12.heic" alt="TBARC archive photograph 06" loading="lazy">
-          <span class="image-index">06</span>
-          <span class="image-open">View image ↗</span>
-        </button>
-        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DN_EqwyE5xC/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
-      </article>
-
-      <article class="entry">
-        <button class="journal-image" type="button" data-photo="6" aria-label="Open archive photograph 07">
-          <img src="../assets/img11.heic" alt="TBARC archive photograph 07" loading="lazy">
-          <span class="image-index">07</span>
-          <span class="image-open">View image ↗</span>
-        </button>
-        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DNyHM-oZlFL/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
-      </article>
-
-      <article class="entry">
-        <button class="journal-image" type="button" data-photo="7" aria-label="Open archive photograph 08">
-          <img src="../assets/img10.heic" alt="TBARC archive photograph 08" loading="lazy">
-          <span class="image-index">08</span>
-          <span class="image-open">View image ↗</span>
-        </button>
-        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DNqMKa5T30d/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
-      </article>
-
-      <article class="entry">
-        <button class="journal-image" type="button" data-photo="8" aria-label="Open archive photograph 09">
-          <img src="../assets/img9.heic" alt="TBARC archive photograph 09" loading="lazy">
-          <span class="image-index">09</span>
-          <span class="image-open">View image ↗</span>
-        </button>
-        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DNffJwGMxTu/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
-      </article>
-
-      <article class="entry">
-        <button class="journal-image tall" type="button" data-photo="9" aria-label="Open archive photograph 10">
-          <img src="../assets/img8.heic" alt="TBARC archive photograph 10" loading="lazy">
-          <span class="image-index">10</span>
-          <span class="image-open">View image ↗</span>
-        </button>
-        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DNfBTU7R45Z/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
-      </article>
-
-      <article class="entry">
-        <button class="journal-image" type="button" data-photo="10" aria-label="Open archive photograph 11">
-          <img src="../assets/img7.heic" alt="TBARC archive photograph 11" loading="lazy">
-          <span class="image-index">11</span>
-          <span class="image-open">View image ↗</span>
-        </button>
-        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DMKBqFtxrDv/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
-      </article>
-
-      <article class="entry">
-        <button class="journal-image" type="button" data-photo="11" aria-label="Open archive photograph 12">
-          <img src="../assets/img6.heic" alt="TBARC archive photograph 12" loading="lazy">
-          <span class="image-index">12</span>
-          <span class="image-open">View image ↗</span>
-        </button>
-        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DJCPoaVTFUO/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
-      </article>
-
-      <article class="entry">
-        <button class="journal-image" type="button" data-photo="12" aria-label="Open archive photograph 13">
-          <img src="../assets/img5.heic" alt="TBARC archive photograph 13" loading="lazy">
-          <span class="image-index">13</span>
-          <span class="image-open">View image ↗</span>
-        </button>
-        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DJHS-wSz3jc/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
-      </article>
-
-      <article class="entry">
-        <button class="journal-image tall" type="button" data-photo="13" aria-label="Open archive photograph 14">
-          <img src="../assets/img4.heic" alt="TBARC archive photograph 14" loading="lazy">
-          <span class="image-index">14</span>
-          <span class="image-open">View image ↗</span>
-        </button>
-        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DEkdhYfT52p/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
-      </article>
-
-      <article class="entry">
-        <button class="journal-image" type="button" data-photo="14" aria-label="Open archive photograph 15">
-          <img src="../assets/img3.heic" alt="TBARC archive photograph 15" loading="lazy">
-          <span class="image-index">15</span>
-          <span class="image-open">View image ↗</span>
-        </button>
-        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DEP_XgZTmWQ/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
-      </article>
-
-      <article class="entry">
-        <button class="journal-image" type="button" data-photo="15" aria-label="Open archive photograph 16">
-          <img src="../assets/img2.heic" alt="TBARC archive photograph 16" loading="lazy">
-          <span class="image-index">16</span>
-          <span class="image-open">View image ↗</span>
-        </button>
-        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/C-DbAyHzNP-/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
-      </article>
-
-      <article class="entry">
-        <button class="journal-image" type="button" data-photo="16" aria-label="Open archive photograph 17">
-          <img src="../assets/img1.png" alt="TBARC archive photograph 17" loading="lazy">
-          <span class="image-index">17</span>
-          <span class="image-open">View image ↗</span>
-        </button>
-        <div class="entry-meta"><span>TBARC VISUAL ARCHIVE</span><a href="https://www.instagram.com/p/DEHQAUszWgk/" target="_blank" rel="noopener noreferrer">Original post ↗</a></div>
-      </article>
+<main>
+  <section class="feature-wrap">
+    <div class="feature-heading">
+      <div><p class="section-label">Featured video</p><h2>Watch &amp; explore</h2></div>
+      <p>Watch a selected TBARC session, then explore photographs and more videos from our activities.</p>
     </div>
-  </div>
-</section>
-
-<section class="closing">
-  <div><p class="section-label">Stay connected</p><h2>More stories. More people. More action.</h2><p>Follow TBARC for updates from our workshops, field activities, awareness programmes and conservation initiatives.</p></div>
-  <a href="https://www.instagram.com/tbarcindia/" target="_blank" rel="noopener noreferrer">FOLLOW TBARC ON INSTAGRAM ↗</a>
-</section>
-
+    <div class="featured">
+      <button class="featured-thumb" type="button" data-video="0" aria-label="Play featured video: Mental Health Day Webinar ( Malayalam)">
+        <img src="https://i.ytimg.com/vi/kTQ9AtiK_z4/maxresdefault.jpg" alt="YouTube thumbnail for Mental Health Day Webinar ( Malayalam)" fetchpriority="high">
+        <span class="featured-tag">Featured video</span><span class="play-button"><span>▶</span></span>
+      </button>
+      <div class="featured-copy">
+        <span class="number">TBARC VIDEO JOURNAL</span>
+        <h3>Mental Health Day Webinar ( Malayalam)</h3>
+        <p>Watch this session from the TBARC video archive.</p>
+        <button type="button" data-video="0">PLAY VIDEO ↗</button>
+      </div>
+    </div>
+  </section>
+  <section class="archive" id="photos">
+    <div class="archive-inner">
+      <div class="archive-head"><div><p class="section-label">Photo gallery</p><h2>Moments from the field.</h2></div></div>
+      <div class="archive-grid">
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/DOTaEnSkcH0/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img17.heic" alt="TBARC archive photograph 01" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/DOllERaE5I7/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img16.jpg" alt="TBARC archive photograph 02" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/DOaSegTjLjW/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img15.jpg" alt="TBARC archive photograph 03" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/DOYj2DPEfSy/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img14.jpg" alt="TBARC archive photograph 04" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/DOTaEnSkcH0/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img13.jpg" alt="TBARC archive photograph 05" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/DN_EqwyE5xC/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img12.heic" alt="TBARC archive photograph 06" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/DNyHM-oZlFL/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img11.heic" alt="TBARC archive photograph 07" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/DNqMKa5T30d/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img10.heic" alt="TBARC archive photograph 08" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/DNffJwGMxTu/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img9.heic" alt="TBARC archive photograph 09" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/DNfBTU7R45Z/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img8.heic" alt="TBARC archive photograph 10" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/DMKBqFtxrDv/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img7.heic" alt="TBARC archive photograph 11" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/DJCPoaVTFUO/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img6.heic" alt="TBARC archive photograph 12" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/DJHS-wSz3jc/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img5.heic" alt="TBARC archive photograph 13" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/DEkdhYfT52p/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img4.heic" alt="TBARC archive photograph 14" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/DEP_XgZTmWQ/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img3.heic" alt="TBARC archive photograph 15" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/C-DbAyHzNP-/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img2.heic" alt="TBARC archive photograph 16" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+        <article class="entry">
+          <a class="journal-image" href="https://www.instagram.com/p/DEHQAUszWgk/" target="_blank" rel="noopener noreferrer" aria-label="Open this TBARC photograph on Instagram">
+            <img src="../assets/img1.png" alt="TBARC archive photograph 17" loading="lazy">
+            <span class="instagram-overlay" aria-hidden="true">Instagram ↗</span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="library" id="videos">
+    <div class="library-inner">
+      <div class="library-head"><div><p class="section-label">Video collection</p><h2>More from TBARC.</h2></div></div>
+      <div class="video-grid">
+        <article class="video-card">
+          <button class="thumb-button" type="button" data-video="1" aria-label="Play A Journey From Coal to Stars">
+            <img src="https://i.ytimg.com/vi/FeI5YhD374o/hqdefault.jpg" alt="YouTube thumbnail for A Journey From Coal to Stars" loading="lazy">
+            <span class="play-button" aria-hidden="true"><span>▶</span></span>
+          </button>
+          <div class="video-card-body"><h3>A Journey From Coal to Stars</h3><button class="watch-link" type="button" data-video="1">Watch video <span>↗</span></button></div>
+        </article>
+        <article class="video-card">
+          <button class="thumb-button" type="button" data-video="2" aria-label="Play Buzz for the plant: Meet the pollinating heroes">
+            <img src="https://i.ytimg.com/vi/ZVOKCBTo9ls/hqdefault.jpg" alt="YouTube thumbnail for Buzz for the plant: Meet the pollinating heroes" loading="lazy">
+            <span class="play-button" aria-hidden="true"><span>▶</span></span>
+          </button>
+          <div class="video-card-body"><h3>Buzz for the plant: Meet the pollinating heroes</h3><button class="watch-link" type="button" data-video="2">Watch video <span>↗</span></button></div>
+        </article>
+        <article class="video-card">
+          <button class="thumb-button" type="button" data-video="3" aria-label="Play The Un-noticed Commoner Part 2">
+            <img src="https://i.ytimg.com/vi/feOfJEHEtFE/hqdefault.jpg" alt="YouTube thumbnail for The Un-noticed Commoner Part 2" loading="lazy">
+            <span class="play-button" aria-hidden="true"><span>▶</span></span>
+          </button>
+          <div class="video-card-body"><h3>The Un-noticed Commoner Part 2</h3><button class="watch-link" type="button" data-video="3">Watch video <span>↗</span></button></div>
+        </article>
+        <article class="video-card">
+          <button class="thumb-button" type="button" data-video="4" aria-label="Play The Un-noticed Commoner Part 1">
+            <img src="https://i.ytimg.com/vi/yJWTtvyfuDE/hqdefault.jpg" alt="YouTube thumbnail for The Un-noticed Commoner Part 1" loading="lazy">
+            <span class="play-button" aria-hidden="true"><span>▶</span></span>
+          </button>
+          <div class="video-card-body"><h3>The Un-noticed Commoner Part 1</h3><button class="watch-link" type="button" data-video="4">Watch video <span>↗</span></button></div>
+        </article>
+        <article class="video-card">
+          <button class="thumb-button" type="button" data-video="5" aria-label="Play Know our Giants: &#x27; Elephants &#x27;">
+            <img src="https://i.ytimg.com/vi/52rx1SZUqfk/hqdefault.jpg" alt="YouTube thumbnail for Know our Giants: &#x27; Elephants &#x27;" loading="lazy">
+            <span class="play-button" aria-hidden="true"><span>▶</span></span>
+          </button>
+          <div class="video-card-body"><h3>Know our Giants: &#x27; Elephants &#x27;</h3><button class="watch-link" type="button" data-video="5">Watch video <span>↗</span></button></div>
+        </article>
+        <article class="video-card">
+          <button class="thumb-button" type="button" data-video="6" aria-label="Play Environmental day Webinar 2026">
+            <img src="https://i.ytimg.com/vi/TqbDkY1k5go/hqdefault.jpg" alt="YouTube thumbnail for Environmental day Webinar 2026" loading="lazy">
+            <span class="play-button" aria-hidden="true"><span>▶</span></span>
+          </button>
+          <div class="video-card-body"><h3>Environmental day Webinar 2026</h3><button class="watch-link" type="button" data-video="6">Watch video <span>↗</span></button></div>
+        </article>
+        <article class="video-card">
+          <button class="thumb-button" type="button" data-video="7" aria-label="Play Harnessing AI for a Resilent Earth Jishna M">
+            <img src="https://i.ytimg.com/vi/Zb3UuK04VY4/hqdefault.jpg" alt="YouTube thumbnail for Harnessing AI for a Resilent Earth Jishna M" loading="lazy">
+            <span class="play-button" aria-hidden="true"><span>▶</span></span>
+          </button>
+          <div class="video-card-body"><h3>Harnessing AI for a Resilent Earth Jishna M</h3><button class="watch-link" type="button" data-video="7">Watch video <span>↗</span></button></div>
+        </article>
+        <article class="video-card">
+          <button class="thumb-button" type="button" data-video="8" aria-label="Play Geoinformatics for Ecologists | Dr. Harshid P | GIS &amp; Remote Sensing Webinar">
+            <img src="https://i.ytimg.com/vi/Z8FGaTJJ-gw/hqdefault.jpg" alt="YouTube thumbnail for Geoinformatics for Ecologists | Dr. Harshid P | GIS &amp; Remote Sensing Webinar" loading="lazy">
+            <span class="play-button" aria-hidden="true"><span>▶</span></span>
+          </button>
+          <div class="video-card-body"><h3>Geoinformatics for Ecologists | Dr. Harshid P | GIS &amp; Remote Sensing Webinar</h3><button class="watch-link" type="button" data-video="8">Watch video <span>↗</span></button></div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="subscribe">
+    <div><p class="section-label">Stay connected</p><h2>More stories. More perspectives.</h2><p>Follow TBARC on Instagram and YouTube for field activities, biodiversity stories, webinars and educational sessions.</p></div>
+    <a href="https://www.youtube.com/@tbarcindia" target="_blank" rel="noopener noreferrer">VISIT TBARC ON YOUTUBE ↗</a>
+  </section>
+</main>
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-grid">
@@ -851,44 +919,44 @@ html body header.site-header button.menu-toggle {
           <a href="https://www.linkedin.com/company/tbarcindia" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M5.2 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3.5 9h3.4v11.5H3.5zM9 9h3.2v1.6h.1A3.5 3.5 0 0 1 15.5 8c3.5 0 4.1 2.3 4.1 5.2v7.3h-3.4V14c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3v6.6H9z"/></svg></a>
         </div>
       </div>
-      <div><h3>Explore TBARC</h3><div class="footer-links"><a href="../">Home</a><a href="../about/">About</a><a href="../blog/">Blog</a><a href="./">Gallery</a><a href="../videos/">Videos</a><a href="../downloads/">Downloads</a><a href="../bio-invasion.html">Bio-Invasion</a></div></div>
+      <div><h3>Explore TBARC</h3><div class="footer-links"><a href="https://events.tbarc.in/">Events</a><a href="../blog/">Blog</a><a href="./">Gallery</a><a href="../bio-invasion.html">Bioinvasion</a></div></div>
       <div class="footer-contact"><h3>Contact</h3><p><a href="mailto:tbarcindia@gmail.com">tbarcindia@gmail.com</a></p><p>Appolo, Mampad College PO,<br>Nilambur, Kerala 676542, India</p><p>Connect with us for research, volunteering and conservation initiatives.</p></div>
     </div>
     <div class="footer-bottom"><span>© 2026 Tropical Biodiversity Action &amp; Research Center. All rights reserved.</span><span>Built for biodiversity and people.</span></div>
   </div>
 </footer>
 
-<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="TBARC photograph viewer">
-  <button id="viewerClose" aria-label="Close viewer" type="button">×</button><button id="viewerPrev" aria-label="Previous image" type="button">‹</button>
-  <figure><img id="viewerImg" src="" alt=""><figcaption><span id="viewerCount"></span><a id="viewerLink" href="#" target="_blank" rel="noopener noreferrer">Open original post ↗</a></figcaption></figure>
-  <button id="viewerNext" aria-label="Next image" type="button">›</button>
+<div class="player-modal" id="playerModal" role="dialog" aria-modal="true" aria-label="YouTube video player">
+  <div class="player-box">
+    <button class="player-close" id="playerClose" type="button" aria-label="Close video">×</button>
+    <iframe class="player-frame" id="playerFrame" src="" title="TBARC YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p class="player-title" id="playerTitle"></p>
+  </div>
 </div>
-<script>
-const photoItems = [{"src": "../assets/img17.heic", "url": "https://www.instagram.com/p/DOTaEnSkcH0/", "alt": "TBARC archive photograph 01"}, {"src": "../assets/img16.jpg", "url": "https://www.instagram.com/p/DOllERaE5I7/", "alt": "TBARC archive photograph 02"}, {"src": "../assets/img15.jpg", "url": "https://www.instagram.com/p/DOaSegTjLjW/", "alt": "TBARC archive photograph 03"}, {"src": "../assets/img14.jpg", "url": "https://www.instagram.com/p/DOYj2DPEfSy/", "alt": "TBARC archive photograph 04"}, {"src": "../assets/img13.jpg", "url": "https://www.instagram.com/p/DOTaEnSkcH0/", "alt": "TBARC archive photograph 05"}, {"src": "../assets/img12.heic", "url": "https://www.instagram.com/p/DN_EqwyE5xC/", "alt": "TBARC archive photograph 06"}, {"src": "../assets/img11.heic", "url": "https://www.instagram.com/p/DNyHM-oZlFL/", "alt": "TBARC archive photograph 07"}, {"src": "../assets/img10.heic", "url": "https://www.instagram.com/p/DNqMKa5T30d/", "alt": "TBARC archive photograph 08"}, {"src": "../assets/img9.heic", "url": "https://www.instagram.com/p/DNffJwGMxTu/", "alt": "TBARC archive photograph 09"}, {"src": "../assets/img8.heic", "url": "https://www.instagram.com/p/DNfBTU7R45Z/", "alt": "TBARC archive photograph 10"}, {"src": "../assets/img7.heic", "url": "https://www.instagram.com/p/DMKBqFtxrDv/", "alt": "TBARC archive photograph 11"}, {"src": "../assets/img6.heic", "url": "https://www.instagram.com/p/DJCPoaVTFUO/", "alt": "TBARC archive photograph 12"}, {"src": "../assets/img5.heic", "url": "https://www.instagram.com/p/DJHS-wSz3jc/", "alt": "TBARC archive photograph 13"}, {"src": "../assets/img4.heic", "url": "https://www.instagram.com/p/DEkdhYfT52p/", "alt": "TBARC archive photograph 14"}, {"src": "../assets/img3.heic", "url": "https://www.instagram.com/p/DEP_XgZTmWQ/", "alt": "TBARC archive photograph 15"}, {"src": "../assets/img2.heic", "url": "https://www.instagram.com/p/C-DbAyHzNP-/", "alt": "TBARC archive photograph 16"}, {"src": "../assets/img1.png", "url": "https://www.instagram.com/p/DEHQAUszWgk/", "alt": "TBARC archive photograph 17"}];
-const viewer = document.getElementById("viewer");
-const viewerImg = document.getElementById("viewerImg");
-const viewerLink = document.getElementById("viewerLink");
-const viewerCount = document.getElementById("viewerCount");
-let current = 0;
-function openViewer(index) {
-  current = (index + photoItems.length) % photoItems.length;
-  const p = photoItems[current];
-  viewerImg.src = p.src; viewerImg.alt = p.alt; viewerLink.href = p.url;
-  viewerCount.textContent = `${current + 1} / ${photoItems.length}`;
-  viewer.classList.add("open"); document.body.style.overflow = "hidden";
-}
-function closeViewer() { viewer.classList.remove("open"); viewerImg.src = ""; document.body.style.overflow = ""; }
-document.querySelectorAll("[data-photo]").forEach(el => el.addEventListener("click", () => openViewer(Number(el.dataset.photo))));
-document.getElementById("viewerClose").addEventListener("click", closeViewer);
-document.getElementById("viewerPrev").addEventListener("click", () => openViewer(current - 1));
-document.getElementById("viewerNext").addEventListener("click", () => openViewer(current + 1));
-viewer.addEventListener("click", e => { if (e.target === viewer) closeViewer(); });
-document.addEventListener("keydown", e => { if (!viewer.classList.contains("open")) return; if (e.key === "Escape") closeViewer(); if (e.key === "ArrowLeft") openViewer(current - 1); if (e.key === "ArrowRight") openViewer(current + 1); });
-const menu = document.getElementById("menu"), links = document.getElementById("navLinks");
-menu.addEventListener("click", () => { const opened = links.classList.toggle("open"); menu.setAttribute("aria-expanded", String(opened)); menu.textContent = opened ? "×" : "☰"; });
-</script>
 
 <script>
+const videoItems = [{"title": "Mental Health Day Webinar ( Malayalam)", "id": "kTQ9AtiK_z4"}, {"title": "A Journey From Coal to Stars", "id": "FeI5YhD374o"}, {"title": "Buzz for the plant: Meet the pollinating heroes", "id": "ZVOKCBTo9ls"}, {"title": "The Un-noticed Commoner Part 2", "id": "feOfJEHEtFE"}, {"title": "The Un-noticed Commoner Part 1", "id": "yJWTtvyfuDE"}, {"title": "Know our Giants: ' Elephants '", "id": "52rx1SZUqfk"}, {"title": "Environmental day Webinar 2026", "id": "TqbDkY1k5go"}, {"title": "Harnessing AI for a Resilent Earth Jishna M", "id": "Zb3UuK04VY4"}, {"title": "Geoinformatics for Ecologists | Dr. Harshid P | GIS & Remote Sensing Webinar", "id": "Z8FGaTJJ-gw"}];
+const modal = document.getElementById("playerModal");
+const frame = document.getElementById("playerFrame");
+const playerTitle = document.getElementById("playerTitle");
+function openVideo(index) {
+  const video = videoItems[index];
+  if (!video) return;
+  frame.src = `https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&rel=0`;
+  frame.title = video.title;
+  playerTitle.textContent = video.title;
+  modal.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function closeVideo() {
+  modal.classList.remove("open");
+  frame.src = "";
+  document.body.style.overflow = "";
+}
+document.querySelectorAll("[data-video]").forEach(button => button.addEventListener("click", () => openVideo(Number(button.dataset.video))));
+document.getElementById("playerClose").addEventListener("click", closeVideo);
+modal.addEventListener("click", event => { if (event.target === modal) closeVideo(); });
+document.addEventListener("keydown", event => { if (event.key === "Escape" && modal.classList.contains("open")) closeVideo(); });
 document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.querySelector('.site-header .menu-toggle');
   const nav = document.querySelector('.site-header #primary-navigation');
@@ -898,16 +966,15 @@ document.addEventListener('DOMContentLoaded', function () {
       toggle.setAttribute('aria-expanded', String(isOpen));
       toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
     });
-    nav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        nav.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open navigation');
-      });
-    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open navigation');
+    }));
   }
 });
 </script>
 
 </body>
+</html></body>
 </html>
