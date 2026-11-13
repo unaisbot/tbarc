@@ -25,6 +25,9 @@
     .topic-filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px}.topic-filter{appearance:none;border:1px solid #d8e5d5;background:#fff;color:#425047;border-radius:30px;padding:9px 16px;font:600 .85rem 'DM Sans',sans-serif;cursor:pointer;transition:background .2s,border-color .2s,color .2s}.topic-filter:hover{border-color:#8eae80;color:var(--green)}.topic-filter.active{background:var(--green);border-color:var(--green);color:#fff}.topic-filter:focus-visible{outline:3px solid #b9e77a;outline-offset:3px}.no-posts{display:none;padding:25px;border:1px dashed #b9cdb4;border-radius:12px;color:var(--muted);text-align:center;background:#fbfdf9}.no-posts.show{display:block}
     .latest-post{display:grid;grid-template-columns:1.08fr .92fr;min-height:350px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}.latest-image{min-height:350px;overflow:hidden;background:#dfe9dc}.latest-image img{width:100%;height:100%;min-height:350px;object-fit:cover}.latest-content{padding:clamp(26px,4vw,48px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.latest-label{display:inline-flex;align-items:center;gap:8px;background:#eaf3e5;color:var(--green);border-radius:30px;padding:7px 13px;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px}.latest-label:before{content:'';width:7px;height:7px;border-radius:50%;background:#84cc16}.latest-content h3{font-size:clamp(1.55rem,3vw,2.25rem);letter-spacing:-.04em;margin:16px 0}.latest-content p{font-size:.96rem;line-height:1.85}.latest-content .read-link{margin-top:18px;padding:13px 18px;background:var(--green);color:#fff;border-radius:7px}.latest-content .read-link:hover{background:#0d3b20}
     .sample-label{display:inline-flex;align-items:center;gap:6px;color:#6a786d;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}.sample-label:before{content:'';width:6px;height:6px;border-radius:50%;background:#a3b69e}.sample-card .article-body{min-height:245px}.sample-card .read-link{color:#748176;cursor:default}.sample-card .read-link span{display:none}.posts-heading{margin:48px 0 22px}.posts-heading h3{font-size:1.55rem;letter-spacing:-.03em;margin-bottom:7px}.posts-heading p{font-size:.92rem}
+
+    /* Temporarily hide individual blog cards; remove the hidden attribute to publish one */
+    .article-grid .article-card[hidden] { display: none !important; }
     .article-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.article-card{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:0 8px 28px rgba(25,65,35,.045);transition:transform .25s ease,box-shadow .25s ease;display:flex;flex-direction:column}.article-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}.article-image{height:220px;overflow:hidden;background:#dfe9dc}.article-image img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}.article-card:hover .article-image img{transform:scale(1.045)}.article-body{padding:24px;display:flex;flex:1;flex-direction:column}.article-meta{display:flex;flex-wrap:wrap;gap:9px 14px;align-items:center;color:#6b786d;font-size:.78rem;font-weight:600;margin-bottom:13px}.category{color:var(--green2);background:#eaf3e5;border-radius:30px;padding:4px 10px;font-size:.72rem;font-weight:800;letter-spacing:.04em}.article-body h3{font-size:1.28rem;letter-spacing:-.025em;margin-bottom:12px}.article-body p{font-size:.92rem;line-height:1.8}.read-link{display:inline-flex;align-items:center;gap:9px;color:var(--green);font-weight:800;font-size:.9rem;margin-top:auto;padding-top:22px}.read-link span{transition:transform .2s}.article-card:hover .read-link span{transform:translateX(4px)}
     .note{margin-top:34px;padding:22px 25px;border:1px dashed #b9cdb4;border-radius:12px;background:rgba(255,255,255,.65);display:flex;gap:14px;align-items:flex-start}.note-mark{width:34px;height:34px;flex:none;border-radius:50%;background:#e5f1dd;color:var(--green);display:grid;place-items:center;font-weight:800}.note p{font-size:.92rem;line-height:1.75}
     .footer{background:#102d1b;color:#dce8dd;padding:58px 0 22px}.footer-grid{display:grid;grid-template-columns:1.25fr .7fr .7fr 1fr;gap:42px}.footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:16px}.footer-brand img{width:65px;height:65px;object-fit:contain;background:#fff;border-radius:50%;padding:4px}.footer-brand strong{font-family:Manrope,sans-serif;color:white;line-height:1.25}.footer-about p{font-size:.88rem;color:#b8cbbb;max-width:290px}.socials{display:flex;gap:9px;margin-top:22px}.socials a{width:37px;height:37px;border:1px solid #45634c;border-radius:50%;display:grid;place-items:center;color:#e7f1e8;transition:.2s}.socials a:hover{background:#d5edbd;color:#153d23}.socials svg{width:17px;height:17px;fill:currentColor}.footer h3{color:white;font-size:.88rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px}.footer-links{list-style:none;padding:0;margin:0;display:grid;gap:10px}.footer-links a,.footer-contact{font-size:.88rem;color:#b8cbbb}.footer-links a:hover,.footer-contact a:hover{color:#d5edbd}.footer-contact{display:grid;gap:13px}.copyright{border-top:1px solid #34533c;margin-top:42px;padding-top:20px;text-align:center;color:#9fb6a3;font-size:.8rem}
@@ -719,7 +722,7 @@ h1,h2,h3{font-family:'Manrope',sans-serif!important}
       </div>
 
       <div class="article-grid" id="articleGrid">
-        <article class="article-card sample-card" data-category="species">
+        <article class="article-card sample-card" data-category="species" hidden>
           <div class="article-image"><img src="../assets/bird.jpg" alt="Bird species in a natural habitat"></div>
           <div class="article-body">
             <div class="article-meta"><span class="category">Species</span></div>
@@ -743,7 +746,7 @@ h1,h2,h3{font-family:'Manrope',sans-serif!important}
   </div>
 </article>
 
-        <article class="article-card sample-card" data-category="ecosystem-services">
+        <article class="article-card sample-card" data-category="ecosystem-services" hidden>
           <div class="article-image"><img src="../assets/gallery3.jpeg" alt="Green landscape providing ecosystem benefits"></div>
           <div class="article-body">
             <div class="article-meta"><span class="category">Ecosystem Services</span></div>
@@ -753,7 +756,7 @@ h1,h2,h3{font-family:'Manrope',sans-serif!important}
           </div>
         </article>
 
-        <article class="article-card sample-card" data-category="community">
+        <article class="article-card sample-card" data-category="community" hidden>
           <div class="article-image"><img src="../assets/gandhi.jpg" alt="Community participation and environmental awareness"></div>
           <div class="article-body">
             <div class="article-meta"><span class="category">Community</span></div>
@@ -763,7 +766,7 @@ h1,h2,h3{font-family:'Manrope',sans-serif!important}
           </div>
         </article>
 
-        <article class="article-card sample-card" data-category="climate">
+        <article class="article-card sample-card" data-category="climate" hidden>
           <div class="article-image"><img src="../assets/banner3.jpg" alt="Changing environment and climate"></div>
           <div class="article-body">
             <div class="article-meta"><span class="category">Climate</span></div>
@@ -773,7 +776,7 @@ h1,h2,h3{font-family:'Manrope',sans-serif!important}
           </div>
         </article>
 
-        <article class="article-card sample-card" data-category="biodiversity">
+        <article class="article-card sample-card" data-category="biodiversity" hidden>
           <div class="article-image"><img src="../assets/banner4.jpg" alt="Biodiversity of Kerala"></div>
           <div class="article-body">
             <div class="article-meta"><span class="category">Biodiversity</span></div>
